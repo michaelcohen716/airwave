@@ -12,7 +12,7 @@ import SessionFormContainer from './session/session_form_container';
 const App = () => {
   return (
     <div>
-      <h1>Hello Airwave</h1>
+      <h1>Welcome to Airwave</h1>
       <Route path='/login' component={SessionFormContainer} />
       <Route path='/signup' component={SessionFormContainer} />
 

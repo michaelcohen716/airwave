@@ -32,6 +32,7 @@ class SessionForm extends React.Component {
     const submitText = this.props.formType === "login" ? "Login" : "Signup";
     return (
     <div className="session-form-container">
+        // 
         <form onSubmit={this.handleSubmit} className="session-form-box">
           <label>Username
             <input type="text" value={this.state.username}

@@ -9,11 +9,16 @@ document.addEventListener('DOMContentLoaded', () => {
   const store = configureStore();
   const root = document.getElementById('root');
   ReactDOM.render(<Root store={store} />, root);
+  // if (window.currentUser){
+  //   store = configureStore({session: {currentUser: window.currentUser}});
+  //   delete window.currentUser;
+  // } else {
+  //   store = configureStore();
+  // }
 
+  const current_user = document.getElementById("bootstrap-current-user");
   //test
   window.getState = store.getState;
   window.dispatch = store.dispatch;
-  window.login = login;
-  window.logout = logout;
-  window.signup = signup;
+
 });
