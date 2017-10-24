@@ -50,6 +50,10 @@ group :development, :test do
   gem 'selenium-webdriver'
 end
 
+group :production do
+  gem 'rails_12factor'
+end
+
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'
