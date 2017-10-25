@@ -9,6 +9,9 @@ class NavBar extends React.Component {
   }
 
   render(){
+    const usernameOrNot = this.props.currentUser === null ? "LOG IN" : this.props.currentUser.username;
+    const freeTrialOrNot = this.props.currentUser === null ? "START YOUR FREE TRIAL" : "GET LIVE TV";
+
     return (
       <div className="nav-bar">
 
@@ -43,12 +46,12 @@ class NavBar extends React.Component {
       <div className="nav-bar-right">
         <section>
           <span className="banner-dropdown">
-            GET LIVE TV
+            {freeTrialOrNot}
           </span>
 
           <span className="account-dropdown">
             <button className="dropdown-button">
-              username
+              {usernameOrNot}
             </button>
             <div className="dropdown-content">
               <button className="dropdown-content-link" onClick={this.props.logout}>

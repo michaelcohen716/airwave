@@ -4,6 +4,10 @@
   height: 10%;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  color: white;
 }
 
 .nav-bar-right {
@@ -58,12 +62,14 @@
   height: 15px;
   width: 15px;
   padding-top: 2px;
+  
 }
 
 
 .banner-dropdown-right{
   font-family: "Flama", Helvetica, Arial, Verdana, sans-serif;
   font-size: 14px;
+  color: white;
 }
 
 .account-dropdown {
@@ -79,7 +85,6 @@
 }
 
 .dropdown-button {
-  background-color: silver;
   color: black;
   cursor: pointer;
   border: none;

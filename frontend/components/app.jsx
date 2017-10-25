@@ -6,13 +6,15 @@ import {
   from 'react-router-dom';
 import SessionFormContainer from './session/session_form_container';
 import NavBarContainer from './nav/nav_bar_container';
+import ShowcaseComponent from './carousel/showcase_component';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 
 const App = () => {
   return (
-    <div className="no-resize">
+    <div>
       <NavBarContainer />
+      <ShowcaseComponent />
       <h1> </h1>
       <AuthRoute path='/login' component={SessionFormContainer} />
       <AuthRoute path='/signup' component={SessionFormContainer} />
