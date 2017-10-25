@@ -52,17 +52,30 @@
   padding-left: 20px;
   padding-top: 3px;
   height: 20px;
+  background-color: silver;
+  border: 1px solid black;
+  border-radius: 6px;
+  opacity: 0.5;
   // background: #ccc;
 }
 
+
+
+.search-parent {
+  margin-left: 12px;
+  margin-top: 5px;
+}
+
 .button-holder {
-  background-image: url('search-icon.png');
+  background-image: image-url('search-icon.png');
   background-size: contain;
   background-repeat: no-repeat;
   height: 15px;
   width: 15px;
   padding-top: 2px;
-  
+  margin-right: 4px;
+  margin-top: 1px;
+  display: flex;
 }
 
 
@@ -88,6 +101,8 @@
   color: black;
   cursor: pointer;
   border: none;
+  color: white;
+
   // text-align: center;
 }
 
@@ -98,6 +113,8 @@
   min-width: 100px;
   box-shadow: 2px;
   z-index: 1;
+  color: white;
+
 }
 
 .dropdown-content-link {
@@ -114,5 +131,5 @@
 }
 
 .account-dropdown:hover .dropdown-button {
-  background-color: magenta;
+  color: #66aa33;
 }

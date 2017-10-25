@@ -3,9 +3,9 @@ import React from 'react';
 const SearchBar = () => {
 
   return (
-    <div>
+    <div className="search-parent">
         <div className="search-bar-input">
-          <input type="search" placeholder="Search by Title" />
+          <input type="search" placeholder="" />
           <div className="button-holder">
 
           </div>

@@ -1,8 +1,12 @@
 .showcase-parent {
-  background-image: url('vintage1.jpg');
+  background-image: image-url('vintage1.jpg');
+  /*opacity: 0.8;*/
+  filter: brightness(50%);
+   /*linear-gradient(#eb01a5, #d13531);*/
   background-size: cover;
   background-position: 10px 400px;
-  /*background-position: calc(100% - 50px) calc(100% - 50px);*/
+
+
   position: fixed;
   /*top: 0;*/
   width: 100%;
