@@ -1,20 +1,68 @@
 .nav-bar {
   display: flex;
+  width: 100%;
+  justify-content: space-between;
 }
 
-.airwave-logo {
-  padding-left: 15px;
-  color: rgb(102, 170, 50);
-  font-size: 20px;
-  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+.nav-bar-right {
+  display: flex;
+  padding-right: 150px;
+  align-items: flex-end;
+}
+.nav-bar-left {
+  display: flex;
+  align-items: center;
+}
 
+
+
+.airwave-logo {
+  padding-top: 12px;
+  padding-left: 150px;
+  padding-right: 8px;
+  color: rgb(102, 170, 50);
+  font-size: 24px;
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+  font-weight: bold;
 }
 
 .banner-dropdown {
-  display: flex;
+  // display: flex;
+  float: left;
   font-family: "Flama", Helvetica, Arial, Verdana, sans-serif;
-  padding: 7px;
-  padding-left: 12px;
-  font-size: 15px;
+  padding: 5px;
+  padding-top: 19px;
+  font-size: 14px;
+  list-style: none;
   // color: white;
+}
+
+.search-bar {
+  padding-top: 5px;
+  height: 1.5em;
+  width: 40px;
+}
+
+.search-bar-input {
+  display: flex;
+  padding-left: 20px;
+  padding-top: 3px;
+  height: 20px;
+  // background: #ccc;
+}
+
+.button-holder {
+  background-image: url('search-icon.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 15px;
+  width: 15px;
+  padding-top: 2px;
+}
+
+
+.banner-dropdown-right{
+  font-family: "Flama", Helvetica, Arial, Verdana, sans-serif;
+  font-size: 14px;
+  float: right;
 }

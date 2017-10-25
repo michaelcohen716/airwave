@@ -1,4 +1,5 @@
 import React from 'react';
+import SearchBar from './search_bar';
 
 const NavBar = () => {
 
@@ -7,25 +8,43 @@ const NavBar = () => {
   return (
     <div className="nav-bar">
 
-      <section className="airwave-logo">
-        airwave
-      </section>
+      <div className="nav-bar-left">
 
-      <section className="banner-dropdown">
-        TV
-      </section>
+        <section className="airwave-logo">
+          airwave
+        </section>
 
-      <section className="banner-dropdown">
-        MOVIES
-      </section>
+        <ul>
 
-      <section className="banner-dropdown">
-        KIDS
-      </section>
+          <li className="banner-dropdown">
+            TV
+          </li>
 
-      <section className="banner-dropdown">
-        ADD-ONS
-      </section>
+          <li className="banner-dropdown">
+            MOVIES
+          </li>
+
+          <li className="banner-dropdown">
+            KIDS
+          </li>
+
+          <li className="banner-dropdown">
+            ADD-ONS
+          </li>
+        </ul>
+
+        <SearchBar />
+      </div>
+
+      <ul className="nav-bar-right">
+        <li className="banner-dropdown">
+          GET LIVE TV
+        </li>
+
+        <li className="banner-dropdown">
+          USERNAME
+        </li>
+      </ul>
     </div>
   );
 };
