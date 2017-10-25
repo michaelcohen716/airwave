@@ -6,15 +6,15 @@ import {signup, login, logout} from './actions/session_actions';
 
 
 document.addEventListener('DOMContentLoaded', () => {
-  const store = configureStore();
+  let store;
   const root = document.getElementById('root');
+  if (window.currentUser){
+    store = configureStore({session: {currentUser: window.currentUser}});
+    delete window.currentUser;
+  } else {
+    store = configureStore();
+  }
   ReactDOM.render(<Root store={store} />, root);
-  // if (window.currentUser){
-  //   store = configureStore({session: {currentUser: window.currentUser}});
-  //   delete window.currentUser;
-  // } else {
-  //   store = configureStore();
-  // }
 
   const current_user = document.getElementById("bootstrap-current-user");
   //test

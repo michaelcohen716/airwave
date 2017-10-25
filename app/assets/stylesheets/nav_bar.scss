@@ -15,8 +15,6 @@
   align-items: center;
 }
 
-
-
 .airwave-logo {
   padding-top: 12px;
   padding-left: 150px;
@@ -65,4 +63,48 @@
 .banner-dropdown-right{
   font-family: "Flama", Helvetica, Arial, Verdana, sans-serif;
   font-size: 14px;
+}
+
+.account-dropdown {
+  font-family: "Flama", Helvetica, Arial, Verdana, sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  float: right;
+  padding: 5px;
+  padding-top: 0px;
+  padding-top: 19px;
+  //
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-button {
+  background-color: silver;
+  color: black;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  position: absolute;
+  // background-color: purple;
+  min-width: 100px;
+  box-shadow: 2px;
+  z-index: 1;
+}
+
+.dropdown-content-link {
+  display: none;
+
+}
+
+.dropdown-content-link:hover {
+  display: block;
+}
+
+.account-dropdown:hover, .dropdown-content {
+  display: block;
+}
+
+.account-dropdown:hover .dropdown-button {
+  background-color: magenta;
 }

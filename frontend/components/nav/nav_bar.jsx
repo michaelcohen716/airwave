@@ -1,5 +1,7 @@
 import React from 'react';
 import SearchBar from './search_bar';
+import { Link } from 'react-router-dom';
+
 
 class NavBar extends React.Component {
   constructor(props){
@@ -39,19 +41,24 @@ class NavBar extends React.Component {
         </div>
 
       <div className="nav-bar-right">
-        <ul>
-          <li className="banner-dropdown">
+        <section>
+          <span className="banner-dropdown">
             GET LIVE TV
-          </li>
+          </span>
 
-          <li className="banner-dropdown">
-            USERNAME
-          </li>
+          <span className="account-dropdown">
+            <button className="dropdown-button">
+              {this.props.currentUser.username}
+            </button>
+            <div className="dropdown-content">
+              <Link className="dropdown-content-link" to="/">Logout</Link>
+            </div>
+          </span>
 
-        </ul>
+        </section>
 
       </div>
-      
+
     </div>
     );
   }

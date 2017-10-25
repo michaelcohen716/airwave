@@ -1,4 +1,4 @@
-import { RECEIVE_CURRENT_USER, RECEIVE_SESSION_ERRORS } from '../session/session_actions';
+import { RECEIVE_CURRENT_USER, RECEIVE_SESSION_ERRORS } from '../actions/session_actions';
 
 const SessionErrorsReducer = (state = [], action) => {
   switch(action.type){

@@ -13,3 +13,11 @@
  *= require_tree .
  *= require_self
  */
+
+.no-resize {
+  min-width: 950px;
+  margin: 0 auto;
+  display: -webkit-flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
