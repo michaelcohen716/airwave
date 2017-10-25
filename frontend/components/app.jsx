@@ -8,11 +8,13 @@ import {
   HashRouter
 } from 'react-router-dom';
 import SessionFormContainer from './session/session_form_container';
+import NavBar from './nav/nav_bar';
 
 const App = () => {
   return (
     <div>
-      <h1>Welcome to Airwave</h1>
+      <NavBar />
+      <h1>app </h1>
       <Route path='/login' component={SessionFormContainer} />
       <Route path='/signup' component={SessionFormContainer} />
 
