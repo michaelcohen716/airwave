@@ -48,10 +48,12 @@ class NavBar extends React.Component {
 
           <span className="account-dropdown">
             <button className="dropdown-button">
-              {this.props.currentUser.username}
+              username
             </button>
             <div className="dropdown-content">
-              <Link className="dropdown-content-link" to="/">Logout</Link>
+              <button className="dropdown-content-link" onClick={this.props.logout}>
+                Logout
+              </button>
             </div>
           </span>
 
