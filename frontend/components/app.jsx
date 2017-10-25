@@ -8,12 +8,12 @@ import {
   HashRouter
 } from 'react-router-dom';
 import SessionFormContainer from './session/session_form_container';
-import NavBar from './nav/nav_bar';
+import NavBarContainer from './nav/nav_bar_container';
 
 const App = () => {
   return (
     <div>
-      <NavBar />
+      <NavBarContainer />
       <h1>app </h1>
       <Route path='/login' component={SessionFormContainer} />
       <Route path='/signup' component={SessionFormContainer} />

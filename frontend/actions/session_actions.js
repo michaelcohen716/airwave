@@ -18,3 +18,14 @@ export const login = (user) => (dispatch) => {
 export const logout = () => (dispatch) => {
   return SessionAPIUtil.logout().then(dispatch(receiveCurrentUser(null)));
 };
+
+// session errors
+
+export const RECEIVE_SESSION_ERRORS = 'RECEIVE_SESSION_ERRORS';
+
+export const receiveErrors = (errors) => {
+  return {
+    type: RECEIVE_SESSION_ERRORS,
+    errors
+  };
+};

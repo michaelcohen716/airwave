@@ -1,53 +1,61 @@
 import React from 'react';
 import SearchBar from './search_bar';
 
-const NavBar = () => {
+class NavBar extends React.Component {
+  constructor(props){
+    super(props);
+  }
 
+  render(){
+    return (
+      <div className="nav-bar">
 
+        <div className="nav-bar-left">
 
-  return (
-    <div className="nav-bar">
+          <section className="airwave-logo">
+            airwave
+          </section>
 
-      <div className="nav-bar-left">
+          <ul>
 
-        <section className="airwave-logo">
-          airwave
-        </section>
+            <li className="banner-dropdown">
+              TV
+            </li>
 
+            <li className="banner-dropdown">
+              MOVIES
+            </li>
+
+            <li className="banner-dropdown">
+              KIDS
+            </li>
+
+            <li className="banner-dropdown">
+              ADD-ONS
+            </li>
+          </ul>
+
+          <SearchBar />
+        </div>
+
+      <div className="nav-bar-right">
         <ul>
-
           <li className="banner-dropdown">
-            TV
+            GET LIVE TV
           </li>
 
           <li className="banner-dropdown">
-            MOVIES
+            USERNAME
           </li>
 
-          <li className="banner-dropdown">
-            KIDS
-          </li>
-
-          <li className="banner-dropdown">
-            ADD-ONS
-          </li>
         </ul>
 
-        <SearchBar />
       </div>
-
-      <ul className="nav-bar-right">
-        <li className="banner-dropdown">
-          GET LIVE TV
-        </li>
-
-        <li className="banner-dropdown">
-          USERNAME
-        </li>
-      </ul>
+      
     </div>
-  );
-};
+    );
+  }
+}
 
 
 export default NavBar;
