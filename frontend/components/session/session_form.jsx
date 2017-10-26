@@ -77,7 +77,7 @@ class SessionForm extends React.Component {
                 {this.renderErrors()}
                 <form onSubmit={this.handleSubmit} className="session-form-box">
                   <span className="airwave-login-head">Log in to Airwave</span>
-                  
+
                   <section className="session-inputs">
                     <input type="text" value={this.state.username}
                       placeholder="username"
@@ -93,7 +93,7 @@ class SessionForm extends React.Component {
                   <span className="forgot-password">
                     Forgot your password/email?
                   </span>
-                  <input type="submit" value={submitText} />
+                  <input type="submit" value={submitText} className="login-button"/>
                 </form>
               </div>
             </section>
