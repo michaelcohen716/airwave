@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 export const NavBar = ({currentUser, openModal, logout}) => {
 
   const freeTrialOrNot = currentUser === null ? "START YOUR FREE TRIAL" : "GET LIVE TV";
-  const usernameOrNot = currentUser === null ? "LOG IN" : currentUser.username;
+  const usernameOrNot = currentUser === null ? "LOG IN" : (currentUser.username);
 
   return(
       <div className="nav-bar">
@@ -41,13 +41,15 @@ export const NavBar = ({currentUser, openModal, logout}) => {
 
       <div className="nav-bar-right">
         <section>
-          <span className="banner-dropdown" onClick={(e)=>openModal("signup")}>
-            {freeTrialOrNot}
+          <span className="banner-dropdown">
+            <button className="dropdown-button" onClick={(e)=>openModal("signup")}>
+              {freeTrialOrNot}
+            </button>
           </span>
 
           <span className="account-dropdown">
             <button className="dropdown-button" onClick={(e)=>openModal("login")}>
-              {usernameOrNot}
+              <span className="username">{usernameOrNot}</span>
             </button>
             <div className="dropdown-content">
               <button className="dropdown-content-link" onClick={logout}>

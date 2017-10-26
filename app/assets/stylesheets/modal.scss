@@ -89,7 +89,8 @@
   width: 10%;
   justify-content: center;
   float: left;
-  z-index: 3;
+  position: relative;
+  // z-index: 1;
 }
 
 .session-divider-or {
@@ -104,6 +105,10 @@
   background: gray;
   text-align: center;
   z-index: 2;
+  position: absolute;
+  span {
+    line-height: 2.4;
+  }
 }
 
 
@@ -111,9 +116,9 @@
   border-left: 1px solid;
   border-color: #ddd;
   padding: 80px 0 106px 40px;
-  position: fixed;
-  top: 130px;
-  left: 616px;
+  position: absolute;
+  top: 37px;
+  left: 28px;
   z-index: 1;
 }
 

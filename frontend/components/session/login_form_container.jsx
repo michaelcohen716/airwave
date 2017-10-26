@@ -11,14 +11,11 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = (dispatch, ownProps) => {
-  
-  // const formType = ownProps.location.pathname == '/signup' ? "signup" : "login";
-  // const switchTo = formType == '/signup' ? "login" : "signup";
-  // const submitAction = (formType == 'login') ? login : signup;
+
   return {
     switchModal: () => dispatch(openModal('signup')),
     closeModal: () => dispatch(closeModal()),
-    submitAction: user => dispatch(submitAction(user)),
+    submitAction: user => dispatch(login(user)),
     formType: "login"
   };
 };

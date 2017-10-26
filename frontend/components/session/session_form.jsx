@@ -1,4 +1,5 @@
 import React from 'react';
+import {withRouter} from 'react-router-dom';
 
 class SessionForm extends React.Component {
   constructor(props){
@@ -13,7 +14,7 @@ class SessionForm extends React.Component {
   handleSubmit(e){
     e.preventDefault();
     const user = Object.assign({}, this.state);
-    this.props.submitAction(user).then(()=> this.props.history.push('/'));
+    this.props.submitAction(user).then(()=> this.props.history.push('/')).then(this.props.closeModal);
   }
 
   update(field){
@@ -45,6 +46,7 @@ class SessionForm extends React.Component {
   render(){
 
     const submitText = this.props.formType === "login" ? "Log in" : "Sign up";
+    const actionText = this.props.formType === "login" ? "Log in to Airwave" : "Sign up for Airwave";
     return (
     <div className="session-form-container" onClick={e=> e.stopPropagation()}>
           <div className="session-form">
@@ -76,7 +78,7 @@ class SessionForm extends React.Component {
               <div className="session-column-airwave">
                 {this.renderErrors()}
                 <form onSubmit={this.handleSubmit} className="session-form-box">
-                  <span className="airwave-login-head">Log in to Airwave</span>
+                  <span className="airwave-login-head">{actionText}</span>
 
                   <section className="session-inputs">
                     <input type="text" value={this.state.username}
@@ -93,7 +95,8 @@ class SessionForm extends React.Component {
                   <span className="forgot-password">
                     Forgot your password/email?
                   </span>
-                  <input type="submit" value={submitText} className="login-button"/>
+                  <input type="submit" value={submitText}
+                                       className="login-button"/>
                 </form>
               </div>
             </section>
@@ -104,4 +107,4 @@ class SessionForm extends React.Component {
   }
 }
 
-export default SessionForm;
+export default withRouter(SessionForm);
