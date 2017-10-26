@@ -2,7 +2,7 @@
   position: fixed;
   width: 550px;
   top: 100px;
-  left: 280px;
+  left: 270px;
   z-index: 279;
   background: rgba(0, 0, 0, 0.2);
 }
@@ -11,7 +11,7 @@
   display: flex;
   flex-direction: row;
   position: absolute;
-  width: 750px;
+  width: 710px;
   height: 250px;
   // top: 50%;
   // left: 50%;
@@ -19,7 +19,7 @@
   background: white;
   justify-content: center;
   z-index: 279;
-  border-radius: 3px;
+  border-radius: 4px;
 }
 .session-form {
   display: flex;
@@ -27,34 +27,135 @@
   flex-direction: row;
 }
 
-.session-form-box {
-  // outline: 1px solid black;
-  padding: 10px;
-}
+
 
 .session-column {
   display: inline-block;
   vertical-align: top;
   font-family: Helvetica, Arial, Verdana, sans-serif;
+  // font-weight: lighter;
   justify-content: center;
+  width: 45%;
+}
+
+//fb section (right)
+
+.session-column-fb {
+  padding-left: 35px;
   padding-top: 40px;
-  width: 50%;
-  // font-size: 14px;
+  padding-right: 10px;
+  padding-bottom: 10px;
 }
-
-.session-box {
-  margin-left: 10px;
-  background: red;
-}
-
 
 .fb-login-head {
+  margin-bottom: 6px;
   font-size: 18px;
 }
 
+.fb-login-button {
+  background-image: image-url('fbloginlogo.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 40px;
+  width: 260px;
+  margin: 10px;
+  margin-left: 0px;
+}
 
 
+.fb-login-recommended {
+  font-size: 12px;
+  color: #6a3;
+  margin-bottom: 15px;
+  margin-top: 10px;
+  line-height: 1em;
+}
 
+.fb-login-attributes {
+  list-style: disc;
+  font-size: 13px;
+  margin-left: 17px;
+  font-weight: 200;
+}
+
+
+.fb-login-attributes li {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+
+.session-divider {
+  width: 10%;
+  justify-content: center;
+  float: left;
+  z-index: 3;
+}
+
+.session-divider-or {
+  height: 27px;
+  width: 27px;
+  font-family: Helvetica, Arial, Verdana, sans-serif;
+  font-size: 12px;
+  border-radius: 50%;
+  border: 1px solid gray;
+  margin: 100px 0 80px 13px;
+  color: white;
+  background: gray;
+  text-align: center;
+  z-index: 2;
+}
+
+
+.session-divider-line {
+  border-left: 1px solid;
+  border-color: #ddd;
+  padding: 80px 0 106px 40px;
+  position: fixed;
+  top: 130px;
+  left: 616px;
+  z-index: 1;
+}
+
+.session-box {
+  display: block;
+  width: 220px;
+  height: 25px;
+  padding-left: 10px;
+  margin: 10px 0;
+  font-size: 13px;
+  font-weight: lighter;
+  box-sizing: border-box;
+  vertical-align: baseline;
+  // cursor: auto;
+  background-color: #f8f8ff;
+  border-radius: 2px;
+  box-shadow: 0.3px 0.3px 0.3px 0.3px gray;
+}
+
+.session-column-airwave {
+  padding-left: 18px;
+  padding-top: 40px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+
+.session-inputs {
+  padding-top: 10px;
+}
+
+.airwave-login-head {
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+.forgot-password {
+  font-size: 12px;
+  font-weight: lighter;
+  color: #37b;
+  margin-top: 20px;
+  padding-top: 20px;
+}
 
 
 // cc
