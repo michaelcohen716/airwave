@@ -3,16 +3,12 @@ import SearchBar from './search_bar';
 import { Link } from 'react-router-dom';
 
 
-class NavBar extends React.Component {
-  constructor(props){
-    super(props);
-  }
+export const NavBar = ({currentUser, openModal, logout}) => {
 
-  render(){
-    const usernameOrNot = this.props.currentUser === null ? "LOG IN" : this.props.currentUser.username;
-    const freeTrialOrNot = this.props.currentUser === null ? "START YOUR FREE TRIAL" : "GET LIVE TV";
+  const freeTrialOrNot = currentUser === null ? "START YOUR FREE TRIAL" : "GET LIVE TV";
+  const usernameOrNot = currentUser === null ? "LOG IN" : currentUser.username;
 
-    return (
+  return(
       <div className="nav-bar">
 
         <div className="nav-bar-left">
@@ -45,16 +41,16 @@ class NavBar extends React.Component {
 
       <div className="nav-bar-right">
         <section>
-          <span className="banner-dropdown">
+          <span className="banner-dropdown" onClick={(e)=>openModal("signup")}>
             {freeTrialOrNot}
           </span>
 
           <span className="account-dropdown">
-            <button className="dropdown-button">
+            <button className="dropdown-button" onClick={(e)=>openModal("login")}>
               {usernameOrNot}
             </button>
             <div className="dropdown-content">
-              <button className="dropdown-content-link" onClick={this.props.logout}>
+              <button className="dropdown-content-link" onClick={logout}>
                 Logout
               </button>
             </div>
@@ -66,8 +62,8 @@ class NavBar extends React.Component {
 
     </div>
     );
-  }
-}
+  };
+
 
 
 export default NavBar;

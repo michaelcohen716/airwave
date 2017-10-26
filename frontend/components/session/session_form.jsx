@@ -34,11 +34,20 @@ class SessionForm extends React.Component {
     );
   }
 
+  openModal() {
+    if (this.props.formType === 'login'){
+      return <button onClick={this.props.switchModal}>Sign Up</button>;
+    } else {
+      return <button onClick={this.props.switchModal}>Log In</button>;
+    }
+  }
+
   render(){
+    
     const submitText = this.props.formType === "login" ? "Login" : "Signup";
     return (
-    <div className="session-form-container">
-        {this.renderErrors}
+    <div className="session-form-container" onClick={e=> e.stopPropagation()}>
+        {this.renderErrors()}
         <form onSubmit={this.handleSubmit} className="session-form-box">
           <label>Username
             <input type="text" value={this.state.username}

@@ -1,19 +1,19 @@
-import React from 'react';
 import { connect } from 'react-redux';
-// import { login, logout, signup } from '../../actions/session_actions';
 import NavBar from './nav_bar';
 import { login, logout, signup } from '../../actions/session_actions';
+import { openModal } from '../../actions/modal_actions';
 
-const mapStateToProps = (state) => {
+const mapStateToProps = ({session}) => {
   return {
-    currentUser: state.session.currentUser
+    currentUser: session.currentUser
   };
 };
 
 const mapDispatchToProps = dispatch => {
 
   return {
-    logout: () => dispatch(logout())
+    logout: () => dispatch(logout()),
+    openModal: (modal) => dispatch(openModal(modal))
   };
 };
 
