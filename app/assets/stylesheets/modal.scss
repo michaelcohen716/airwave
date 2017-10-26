@@ -1,0 +1,60 @@
+.modal-backdrop {
+  position: fixed;
+  width: 550px;
+  top: 100px;
+  left: 280px;
+  z-index: 279;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.session-form-container {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  width: 750px;
+  height: 250px;
+  // top: 50%;
+  // left: 50%;
+  // transform: translate(-50%, -50%);
+  background: white;
+  justify-content: center;
+  z-index: 279;
+  border-radius: 3px;
+}
+.session-form {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.session-form-box {
+  // outline: 1px solid black;
+  padding: 10px;
+}
+
+.session-column {
+  display: inline-block;
+  vertical-align: top;
+  font-family: Helvetica, Arial, Verdana, sans-serif;
+  justify-content: center;
+  padding-top: 40px;
+  width: 50%;
+  // font-size: 14px;
+}
+
+.session-box {
+  margin-left: 10px;
+  background: red;
+}
+
+
+.fb-login-head {
+  font-size: 18px;
+}
+
+
+
+
+
+
+// cc

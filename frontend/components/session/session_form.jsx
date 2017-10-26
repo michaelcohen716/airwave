@@ -43,26 +43,44 @@ class SessionForm extends React.Component {
   }
 
   render(){
-    
+
     const submitText = this.props.formType === "login" ? "Login" : "Signup";
     return (
     <div className="session-form-container" onClick={e=> e.stopPropagation()}>
         {this.renderErrors()}
-        <form onSubmit={this.handleSubmit} className="session-form-box">
-          <label>Username
-            <input type="text" value={this.state.username}
-                   onChange={this.update('username')}
-                   className="session-box" />
-          </label>
+          <div className="session-form">
+            <section className="session-column">
+              <div className="fb-login">
+                <div className="fb-login-head">
+                  <span>Log in instantly with Facebook</span>
+                </div>
+                <button className="fb-login-button"></button>
+                <ul className="fb-login-attributes">
+                  <li>Share what you love with your friends</li>
+                  <li>See the videos your friends want to share</li>
+                  <li>Improve your recommendations</li>
+                </ul>
+              </div>
+            </section>
 
-          <label>Password
-            <input type="password" value={this.state.password}
-                    onChange={this.update('password')}
-                    className="session-box" />
-          </label>
+            <section className="session-column">
+              <form onSubmit={this.handleSubmit} className="session-form-box">
+                Log in to Airwave
+                <input type="text" value={this.state.username}
+                  placeholder="username"
+                  onChange={this.update('username')}
+                  className="session-box" />
 
-          <input type="submit" value={submitText} />
-        </form>
+                <input type="password" value={this.state.password}
+                  placeholder="password"
+                  onChange={this.update('password')}
+                  className="session-box" />
+
+
+                <input type="submit" value={submitText} />
+              </form>
+            </section>
+          </div>
 
       </div>
     );
