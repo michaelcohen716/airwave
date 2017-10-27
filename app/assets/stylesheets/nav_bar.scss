@@ -50,15 +50,17 @@
 }
 
 .search-bar-input {
+  font-family: Helvetica, Arial, Verdana, sans-serif;
   display: flex;
-  padding-left: 20px;
+  padding-left: 10px;
   padding-top: 3px;
+  padding-bottom: 3px;
   height: 20px;
   background-color: silver;
   border: 1px solid black;
   border-radius: 6px;
   opacity: 0.5;
-  // background: #ccc;
+  color: black;
 }
 
 .username {
@@ -120,7 +122,7 @@
 
 .dropdown-content-holder {
   // margin-top: 10px;
-  padding-top: 15px;
+  padding-top: 13px;
   padding-left: 20px;
   padding-right: 10px;
   padding-bottom: 13px;
@@ -164,11 +166,14 @@
 }
 
 .account-dropdown-expand {
-  min-width: 150px;
+  min-width: 50px;
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
+
 }
 
 .account-dropdown-holder {
+  display: flex;
   flex-direction: row;
 }

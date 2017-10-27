@@ -10,7 +10,7 @@ const NavBarDropdownAccount = ({currentUser, logout, openModal}) => {
         <span className="username">{usernameOrNot}</span>
       </button>
       <div className="dropdown-content ">
-        <div className="dropdown-content-holder account-dropdown holder">
+        <div className="dropdown-content-holder account-dropdown-holder">
 
           <div className="account-dropdown-expand">
             <button className="dropdown-content-link">
