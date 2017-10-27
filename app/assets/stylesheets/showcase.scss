@@ -7,7 +7,6 @@
   width: 100%;
   height: 500px;
   z-index: 0;
-  // opacity: 0.8;
   font-family: "Flama", Helvetica, Arial, Verdana, sans-serif;
 }
 
@@ -23,7 +22,7 @@
 // showcase hook
 .showcase-hook {
   margin-top: 50px;
-  margin-left: 10px;
+  margin-left: 34px;
   font-style: italic;
   padding-left: 1px;
   padding-top: 1px;
@@ -55,10 +54,11 @@
 .showcase-title {
   font-size: 30px;
   color: #fff;
-  margin-left: 10px;
-  margin-top: 30px;
+  margin-left: 34px;
+  margin-top: 25px;
   position: relative;
   letter-spacing: 1.3px;
+  line-height: 1.5em;
   font-family: sans-serif;
   font-weight: 500;
   line-height: 18px;
@@ -70,6 +70,8 @@
   position: absolute;
   color: #2b2929;
   text-shadow: 1px 1px 0px #fff;
+  line-height: 1.1em;
+
 }
 
 .showcase-title-origin {
@@ -78,4 +80,71 @@
   left: 0;
   color: #fff;
   text-shadow: 1px 1px 0px #2b2929;
+  line-height: 1.1em;
+
 }
+
+.showcase-episode-title {
+  font-size: 20px;
+  color: #fff;
+  margin-left: 34px;
+  margin-top: 75px;
+  position: relative;
+  letter-spacing: 1.25px;
+  font-family: sans-serif;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.showcase-episode-title-shadow {
+  top: 0;
+  left: 0;
+  position: absolute;
+  color: #2b2929;
+  text-shadow: 1px 1px 0px #fff;
+}
+
+.showcase-episode-title-origin {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #fff;
+  text-shadow: 1px 1px 0px #2b2929;
+}
+
+.showcase-description {
+  font-size: 18px;
+  color: #fff;
+  margin-left: 34px;
+  margin-top: 102px;
+  position: relative;
+  letter-spacing: 1.1px;
+  font-family: sans-serif;
+  font-weight: 200;
+  line-height: 23px;
+}
+
+.showcase-description-shadow {
+  top: 0;
+  left: 0;
+  font-weight: 100;
+  position: absolute;
+  color: #2b2929;
+  text-shadow: 1.2px 1.2px 0px #fff;
+}
+
+.showcase-description-origin {
+  position: absolute;
+  top: 0;
+  font-weight: 100;
+  left: 0;
+  color: #fff;
+  text-shadow: 1px 1px 0px #2b2929;
+}
+
+
+
+
+
+
+//ccc

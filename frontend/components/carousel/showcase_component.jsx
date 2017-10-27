@@ -24,19 +24,30 @@ class ShowcaseComponent extends React.Component {
 
           <div className="showcase-title">
             <div className="showcase-title-shadow">
-              The Monster on 38th Street
+              Westinghouse Studio One
             </div>
             <div className="showcase-title-origin">
-              The Monster on 38th Street
+              Westinghouse Studio One
             </div>
           </div>
 
           <div className="showcase-episode-title">
-
+            <div className="showcase-episode-title-shadow">
+              S2 E6: Ticket to Tahiti
+            </div>
+            <div className="showcase-episode-title-origin">
+              S2 E6: Ticket to Tahiti
+            </div>
           </div>
 
-          <div className="showcase-episode-description">
+          <div className="showcase-description">
+            <div className="showcase-description-shadow">
+              When the local credit union is robbed, some neighborhood folks suspect an inside job
+            </div>
+            <div className="showcase-description-origin">
+              When the local credit union is robbed, some neighborhood folks suspect an inside job
 
+            </div>
           </div>
 
         </section>
