@@ -6,6 +6,16 @@ class User < ApplicationRecord
   attr_reader :password
   after_initialize :ensure_session_token
 
+  has_many :watchlist_adds,
+    primary_key: :id,
+    foreign_key: :user_id,
+    class_name: "WatchlistAdd"
+
+  has_many :watchlist_episodes,
+    through: :watchlist_adds,
+    source: :watchlist_adds  
+
+
   def self.find_by_credentials(username, password)
     user = User.find_by(username: username)
     return nil if user.nil?
