@@ -1,7 +1,7 @@
 import React from 'react';
 import SearchBar from './search_bar';
 import { Link } from 'react-router-dom';
-
+import NavBarDropdownTV from './nav_bar_dropdown_tv';
 
 export const NavBar = ({currentUser, openModal, logout}) => {
 
@@ -26,6 +26,17 @@ export const NavBar = ({currentUser, openModal, logout}) => {
                       </button>
                     </div>
                     );
+  const showFreeTrial = currentUser ?
+                      (
+                        <button className="dropdown-button">
+                          {freeTrialOrNot}
+                        </button>
+                      ) :
+                      (
+                        <button className="dropdown-button" onClick={(e)=>openModal("signup")}>
+                          {freeTrialOrNot}
+                        </button>
+                      )
 
   return(
       <div className="nav-bar">
@@ -38,9 +49,7 @@ export const NavBar = ({currentUser, openModal, logout}) => {
 
           <ul>
 
-            <li className="banner-dropdown">
-              TV
-            </li>
+            <NavBarDropdownTV />
 
             <li className="banner-dropdown">
               MOVIES
@@ -61,9 +70,7 @@ export const NavBar = ({currentUser, openModal, logout}) => {
       <div className="nav-bar-right">
         <section>
           <span className="banner-dropdown">
-            <button className="dropdown-button" onClick={(e)=>openModal("signup")}>
-              {freeTrialOrNot}
-            </button>
+            {showFreeTrial}
           </span>
 
           <span className="account-dropdown">
