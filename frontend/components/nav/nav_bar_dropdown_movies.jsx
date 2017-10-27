@@ -1,29 +1,26 @@
 import React from 'react';
 
-class NavBarDropdownTV extends React.Component {
+class NavBarDropdownMovies extends React.Component {
 
   render(){
     return (
       <span className="banner-dropdown">
         <button className="dropdown-button">
-          TV
+          MOVIES
         </button>
         <div className="dropdown-content">
           <div className="dropdown-content-holder">
             <button className="dropdown-content-link">
-              Popular
-            </button>
-            <button className="dropdown-content-link">
-              Recently Added
+              Documentaries
             </button>
             <button className="dropdown-content-link">
               Genres
             </button>
             <button className="dropdown-content-link">
-              Staff Picks
+              Airwave Movie Night
             </button>
             <button className="dropdown-content-link">
-              Networks
+              Staff Picks
             </button>
           </div>
         </div>
@@ -32,4 +29,4 @@ class NavBarDropdownTV extends React.Component {
   }
 }
 
-export default NavBarDropdownTV;
+export default NavBarDropdownMovies;

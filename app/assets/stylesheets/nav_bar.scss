@@ -123,7 +123,7 @@
   padding-top: 15px;
   padding-left: 20px;
   padding-right: 10px;
-  padding-bottom: 15px;
+  padding-bottom: 13px;
   // background-color: #444444;
   background-color: black;
   opacity: 0.8;
@@ -148,6 +148,11 @@
 
 .dropdown-content-link:hover {
   display: block;
+  color: #66aa33;
+}
+
+.dropdown-button:hover {
+  color: #66aa33;
 }
 
 .account-dropdown:hover .dropdown-content {
@@ -156,4 +161,14 @@
 
 .account-dropdown:hover .dropdown-button {
   color: #66aa33;
+}
+
+.account-dropdown-expand {
+  min-width: 150px;
+  display: flex;
+  flex-direction: column;
+}
+
+.account-dropdown-holder {
+  flex-direction: row;
 }

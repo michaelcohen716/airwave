@@ -2,30 +2,13 @@ import React from 'react';
 import SearchBar from './search_bar';
 import { Link } from 'react-router-dom';
 import NavBarDropdownTV from './nav_bar_dropdown_tv';
+import NavBarDropdownMovies from './nav_bar_dropdown_movies';
+import NavBarDropdownAccount from './nav_bar_dropdown_account';
 
 export const NavBar = ({currentUser, openModal, logout}) => {
 
   const freeTrialOrNot = currentUser === null ? "START YOUR FREE TRIAL" : "GET LIVE TV";
-  const usernameOrNot = currentUser === null ? "LOG IN" : (currentUser.username);
 
-  const showLogout = currentUser ?
-                    (<div>
-                      <button className="dropdown-button">
-                        <span className="username">{usernameOrNot}</span>
-                      </button>
-                      <div className="dropdown-content">
-                        <button className="dropdown-content-link" onClick={logout} >
-                          Logout
-                        </button>
-                      </div>
-                    </div>
-                    )
-                    :(<div>
-                      <button className="dropdown-button" onClick={(e)=>openModal("login")}>
-                        <span className="username">{usernameOrNot}</span>
-                      </button>
-                    </div>
-                    );
   const showFreeTrial = currentUser ?
                       (
                         <button className="dropdown-button">
@@ -48,19 +31,19 @@ export const NavBar = ({currentUser, openModal, logout}) => {
           </section>
 
           <ul>
-
             <NavBarDropdownTV />
+            <NavBarDropdownMovies />
 
             <li className="banner-dropdown">
-              MOVIES
+              <button className="dropdown-button">
+                KIDS
+              </button>
             </li>
 
             <li className="banner-dropdown">
-              KIDS
-            </li>
-
-            <li className="banner-dropdown">
-              ADD-ONS
+              <button className="dropdown-button">
+                ADD-ONS
+              </button>
             </li>
           </ul>
 
@@ -73,9 +56,9 @@ export const NavBar = ({currentUser, openModal, logout}) => {
             {showFreeTrial}
           </span>
 
-          <span className="account-dropdown">
-            {showLogout}
-          </span>
+          <NavBarDropdownAccount currentUser={currentUser}
+                                 logout={logout}
+                                 openModal={openModal}/>
         </section>
       </div>
     </div>
