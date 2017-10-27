@@ -1,13 +1,26 @@
 import React from 'react';
-//beginning of refactor -- return to this
 
-const navBarDropdown = (text) => (
+
+
+const navBarDropdownTV = () => (
   <span className="banner-dropdown">
     <button className="dropdown-button">
-      {text}
+      TV
     </button>
     <div className="dropdown-content">
 
     </div>
   </span>
 );
+
+
+// <span className="account-dropdown">
+//   <button className="dropdown-button" onClick={(e)=>openModal("login")}>
+//     <span className="username">{usernameOrNot}</span>
+//   </button>
+//   <div className="dropdown-content">
+//       (<button className="dropdown-content-link" onClick={logout} >
+  //         Logout
+  //    </button>) :
+//   </div>
+// </span>

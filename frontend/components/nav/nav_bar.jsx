@@ -8,6 +8,25 @@ export const NavBar = ({currentUser, openModal, logout}) => {
   const freeTrialOrNot = currentUser === null ? "START YOUR FREE TRIAL" : "GET LIVE TV";
   const usernameOrNot = currentUser === null ? "LOG IN" : (currentUser.username);
 
+  const showLogout = currentUser ?
+                    (<div>
+                      <button className="dropdown-button">
+                        <span className="username">{usernameOrNot}</span>
+                      </button>
+                      <div className="dropdown-content">
+                        <button className="dropdown-content-link" onClick={logout} >
+                          Logout
+                        </button>
+                      </div>
+                    </div>
+                    )
+                    :(<div>
+                      <button className="dropdown-button" onClick={(e)=>openModal("login")}>
+                        <span className="username">{usernameOrNot}</span>
+                      </button>
+                    </div>
+                    );
+
   return(
       <div className="nav-bar">
 
@@ -48,20 +67,10 @@ export const NavBar = ({currentUser, openModal, logout}) => {
           </span>
 
           <span className="account-dropdown">
-            <button className="dropdown-button" onClick={(e)=>openModal("login")}>
-              <span className="username">{usernameOrNot}</span>
-            </button>
-            <div className="dropdown-content">
-              <button className="dropdown-content-link" onClick={logout}>
-                Logout
-              </button>
-            </div>
+            {showLogout}
           </span>
-
         </section>
-
       </div>
-
     </div>
     );
   };
