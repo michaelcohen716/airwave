@@ -8,7 +8,7 @@ class ShowcaseComponent extends React.Component {
 
   render(){
     return (
-      <div className="showcase-parent">
+      <div>
         <div className="showcase-background">
         </div>
 
