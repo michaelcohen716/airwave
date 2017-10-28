@@ -1,11 +1,14 @@
-.showcase-parent {
+// .showcase-parent {
+//   position: relative;
+// }
+
+.showcase-background {
   background-image: image-url('vintage1.jpg');
   filter: brightness(50%);
   background-size: cover;
   background-position: 10px 500px;
-  position: fixed;
   width: 100%;
-  height: 500px;
+  height: 450px;
   z-index: 0;
   font-family: "Flama", Helvetica, Arial, Verdana, sans-serif;
 }
@@ -84,6 +87,7 @@
 
 }
 
+//showcase-episoe
 .showcase-episode-title {
   font-size: 20px;
   color: #fff;
@@ -112,6 +116,7 @@
   text-shadow: 1px 1px 0px #2b2929;
 }
 
+//showcase-description
 .showcase-description {
   font-size: 18px;
   color: #fff;

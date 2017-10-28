@@ -13,18 +13,18 @@ import { closeModal } from '../actions/modal_actions';
 import { connect } from 'react-redux';
 import LogInContainer from './session/login_form_container';
 import SignUpContainer from './session/signup_form_container';
-
+import Watchlist from './watchlist/watchlist';
 
 const App = ({ modal, closeModal }) => {
   return (
-    <div>
+    <div className="parent-parent">
       <NavBarContainer />
       <Route exact path="/" component={ShowcaseComponent} />
+      <Route exact path="/" component={Watchlist} />
 
       <SessionModal component={modal === "login" ? LogInContainer : SignUpContainer}
         modal={modal}
         closeModal={closeModal} />
-
 
     </div>
   );

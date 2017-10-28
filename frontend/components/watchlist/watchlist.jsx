@@ -9,8 +9,10 @@ const Watchlist = () => {
 
 
   return (
-    <div>
+    <div className="watchlist-parent">
 
     </div>
   );
 };
+
+export default Watchlist;
