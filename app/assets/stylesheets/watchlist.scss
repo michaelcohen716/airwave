@@ -1,7 +1,6 @@
 .watchlist-parent {
-  border: 1px solid black;
+  // border: 1px solid black;
   position: absolute;
-  // top: 525px;
   left: 150px;
   height: 210px;
   width: 74%;
@@ -10,21 +9,40 @@
 }
 
 .watchlist-topbar {
-  height: 25%;
+  height: 23%;
   width: 100%;
-  border: 1px solid black;
 }
 
 .watchlist-topbar-title {
   height: 100%;
   width: 50%;
-  border: 1px solid black;
   text-transform: uppercase;
   font-family: Helvetica, Arial, Verdana, sans-serif;
   font-weight: 100;
   color: #aaaaaa;
   text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.9);
-  font-size: 23px;
+  font-size: 25px;
+}
+
+.watchlist-item-outer {
+  height: 200px;
+  width: 200px;
+  // border: 1px solid blue;
+  background: white;
+}
+
+.watchlist-item-thumb {
+  width: 97%;
+  height: 65%;
+  background-image: image-url('groucho_thumb.jpg');
+  background-size: contain;
+  margin-left: 2.5px;
+  margin-top: 2px;
+}
+
+.watchlist-index {
+  display: flex;
+  justify-content: space-between;
 }
 
 
