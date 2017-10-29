@@ -22,7 +22,7 @@ class WatchlistItem extends React.Component {
             Start Watching
           </button>
           <button className="watchlist-item-title">
-            The Four Marx Brothers
+            Passage on the Lady Anne
           </button>
         </section>
       </div>
