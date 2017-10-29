@@ -1,9 +1,9 @@
 .watchlist-parent {
   // border: 1px solid black;
   position: absolute;
-  left: 150px;
+  left: 120px;
   height: 210px;
-  width: 74%;
+  width: 80%;
   margin-top: 60px;
   margin-bottom: 100px;
 }
@@ -35,17 +35,35 @@
 
 .watchlist-item-outer {
   height: 200px;
-  width: 200px;
-  // border: 1px solid blue;
+  width: 230px;
   background: white;
   box-shadow: 1px 1px 1px #dcdcdc;
+  position: relative;
+}
+
+.watchlist-item-status {
+  height: 20px;
+  width: 92px;
+  font-family: Helvetica, Arial, Verdana, sans-serif;
+  // border: 2px solid red;
+  position: absolute;
+  z-index: 5;
+  box-shadow: 0px 0px 0px #dcdcdc;
+  margin-left: 139px;
+  margin-top: -4px;
+  background: linear-gradient(#6b8e12, #406c1c) repeat;
+  border-radius: 2px;
+  color: white;
+  font-size: 11px;
+  line-height: 19px;
+  text-align: center;
 }
 
 .watchlist-item-thumb {
   width: 97%;
   height: 65%;
-  background-image: image-url('groucho_movie.jpg');
-  background-size: cover;
+  background-image: image-url('twilight_zone.jpg');
+  background-size: contain;
   margin-left: 2.5px;
   margin-top: 2px;
 }

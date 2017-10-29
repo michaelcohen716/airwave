@@ -10,6 +10,9 @@ class WatchlistItem extends React.Component {
 
     return (
       <div className="watchlist-item-outer">
+        <div className="watchlist-item-status">
+          32 Unwatched
+        </div>
         <button className="watchlist-item-thumb">
         </button>
         <button className="watchlist-item-command">
