@@ -34,7 +34,7 @@
 }
 
 .watchlist-item-outer {
-  height: 200px;
+  height: 230px;
   width: 230px;
   background: white;
   box-shadow: 1px 1px 1px #dcdcdc;
@@ -45,7 +45,6 @@
   height: 20px;
   width: 92px;
   font-family: Helvetica, Arial, Verdana, sans-serif;
-  // border: 2px solid red;
   position: absolute;
   z-index: 5;
   box-shadow: 0px 0px 0px #dcdcdc;
@@ -59,11 +58,16 @@
   text-align: center;
 }
 
+.watchlist-item-thumb-pic {
+  width: 100%;
+  height: 100%;
+  background-image: image-url('twilight_zone.jpg');
+  background-size: cover;
+}
+
 .watchlist-item-thumb {
   width: 97%;
   height: 65%;
-  background-image: image-url('twilight_zone.jpg');
-  background-size: contain;
   margin-left: 2.5px;
   margin-top: 2px;
 }
@@ -71,6 +75,10 @@
 .watchlist-index {
   display: flex;
   justify-content: space-between;
+}
+
+.watchlist-item-bottom {
+  
 }
 
 .watchlist-item-command {
