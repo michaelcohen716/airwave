@@ -10,9 +10,14 @@ class WatchlistItem extends React.Component {
 
     return (
       <div className="watchlist-item-outer">
-        <div className="watchlist-item-thumb">
-
-        </div>
+        <button className="watchlist-item-thumb">
+        </button>
+        <button className="watchlist-item-command">
+          Start Watching
+        </button>
+        <button className="watchlist-item-title">
+          The Four Marx Brothers
+        </button>
       </div>
     );
   }

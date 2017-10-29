@@ -11,6 +11,7 @@
 .watchlist-topbar {
   height: 23%;
   width: 100%;
+  margin-bottom: 10px;
 }
 
 .watchlist-topbar-title {
@@ -22,6 +23,14 @@
   color: #aaaaaa;
   text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.9);
   font-size: 25px;
+  // margin-bottom: 30px;
+  margin-left: 3px;
+  vertical-align: top;
+}
+
+.watchlist-topbar-title:hover{
+  color: rgb(102, 170, 50);
+
 }
 
 .watchlist-item-outer {
@@ -29,13 +38,14 @@
   width: 200px;
   // border: 1px solid blue;
   background: white;
+  box-shadow: 1px 1px 1px #dcdcdc;
 }
 
 .watchlist-item-thumb {
   width: 97%;
   height: 65%;
-  background-image: image-url('groucho_thumb.jpg');
-  background-size: contain;
+  background-image: image-url('groucho_movie.jpg');
+  background-size: cover;
   margin-left: 2.5px;
   margin-top: 2px;
 }
@@ -45,8 +55,33 @@
   justify-content: space-between;
 }
 
+.watchlist-item-command {
+  font-style: italic;
+  font-family: Helvetica, Arial, Verdana, sans-serif;
+  font-weight: 100;
+  color: #aaaaaa;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.9);
+  font-size: 12px;
+  margin-left: 16px;
+  margin-top: 15px;
+}
 
+.watchlist-item-command:hover {
+  color: rgb(102, 170, 50);
+}
 
+.watchlist-item-title {
+  font-weight: 550;
+  font-family: Helvetica, Arial, Verdana, sans-serif;
+  font-size: 13px;
+  margin-top: 5px;
+  margin-left: 16px;
+  letter-spacing: 0.4px;
+}
+
+.watchlist-item-title:hover {
+  color: rgb(102, 170, 50);
+}
 
 
 
