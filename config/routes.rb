@@ -2,6 +2,8 @@ Rails.application.routes.draw do
 
   namespace :api, defaults: {format: :json} do
     resources :users, only: [:new, :create, :show]
+    resources :episodes, only: [:show, :index]
+    resources :watchlist_adds
     resource :session, only: [:show, :create, :destroy]
   end
 

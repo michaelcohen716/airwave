@@ -15,7 +15,7 @@
  */
 
 .no-resize {
-  min-width: 950px;
+  min-width: 1200px;
   margin: 0 auto;
   display: -webkit-flex;
   -webkit-flex-wrap: wrap;
@@ -28,4 +28,9 @@
   top: 450;
   height: 1000px;
   width: 100%;
+}
+
+.parent-parent {
+  min-width: 1200px;
+  
 }
