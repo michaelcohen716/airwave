@@ -5,3 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+WatchlistAdd.delete_all
+
+WatchlistAdd.create!(
+  user_id: 2,
+  episode_id: 1
+)

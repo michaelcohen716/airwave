@@ -12,7 +12,8 @@
   margin-left: 10px;
   margin-top: 60px;
   position: absolute;
-
+  box-shadow: 0px 0px 5px #3c3c3c;
+  // border: 1px groove black;
 }
 
 .video-tray {
@@ -31,8 +32,6 @@
   display: flex;
   margin-left: 15%;
   background: black;
-  // opacity: 0.1;
-
   border-bottom: 0.5px solid gray;
   font-size: 24px;
 }
@@ -53,12 +52,27 @@
 }
 
 .play-bar-rewind {
-  margin-left: 4%;
+  margin-left: 3%;
   color: white;
 }
 
-.fa-play {
-  font-size: 54px;
+.play-bar-forward {
+  margin-left: 3%;
+  color: white;
+}
+
+.play-bar-progress {
+  margin-left: 3%;
+  color: white;
+  width: 65%;
+  // display: flex;
+  background: white;
+}
+
+#progress-bar-render {
+  color: green;
+  height: 2px;
+  width: 80%;
 }
 
 #video-controls {
@@ -66,10 +80,10 @@
   width: 100%;
 }
 
-video {
+// video {
   // height: 650px;
   // width: 110%;
-}
+// }
 
 .vsc-controller {
   display: none;

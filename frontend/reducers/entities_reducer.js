@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
 
-import watchlists from './watchlists_reducer';
+import episodes from './episodes_reducer';
 
 export default combineReducers({
-  watchlists
+  episodes
 });

@@ -3,8 +3,14 @@ import Watchlist from './watchlist';
 import { addEpisode, deleteEpisode } from '../../actions/watchlist_actions';
 
 const mapStateToProps = state => {
+
+  let watchlistIds = state.session.currentUser.watchlistIds;
+  let watchlistEpisodes = watchlistIds.map(id => {
+    return state.entities.episodes[id];
+  });
   return {
-    episodes: state.entities.watchlists.episodes
+    currentUser: state.session.currentUser,
+    episodes: watchlistEpisodes
   };
 };
 

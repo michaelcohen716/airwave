@@ -3,23 +3,25 @@ import WatchlistItem from './watchlist_item';
 
 
 
-const Watchlist = () => {
+const Watchlist = ({currentUser, episodes}) => {
+  const episode0 = episodes[0];
 
-
+  const watchlistItems = episodes.map((e) => {
+    return (
+      <WatchlistItem episode={e} key={e.id} />
+    )
+  })
 
 
   return (
     <div className="watchlist-parent">
       <section className="watchlist-topbar">
         <button className="watchlist-topbar-title">
-          Michael's Watchlist
+
         </button>
       </section>
       <section className="watchlist-index">
-        <WatchlistItem />
-        <WatchlistItem />
-        <WatchlistItem />
-        <WatchlistItem />
+        {watchlistItems}
       </section>
     </div>
   );

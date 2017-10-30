@@ -2,21 +2,22 @@ import * as SessionAPIUtil from '../util/session_api_util';
 
 export const RECEIVE_CURRENT_USER = 'RECEIVE_CURRENT_USER';
 
-export const receiveCurrentUser = currentUser => ({
+export const receiveCurrentUser = ({user, episodes}) => ({
   type: RECEIVE_CURRENT_USER,
-  currentUser
+  user,
+  episodes
 });
 
 export const signup = (user) => (dispatch) => {
-  return SessionAPIUtil.signup(user).then(dispatch(receiveCurrentUser(user)));
+  return SessionAPIUtil.signup(user).then((payload) => dispatch(receiveCurrentUser(payload)));
 };
 
 export const login = (user) => (dispatch) => {
-  return SessionAPIUtil.login(user).then(dispatch(receiveCurrentUser(user)));
+  return SessionAPIUtil.login(user).then((payload) => dispatch(receiveCurrentUser(payload)));
 };
 
 export const logout = () => (dispatch) => {
-  return SessionAPIUtil.logout().then(dispatch(receiveCurrentUser(null)));
+  return SessionAPIUtil.logout().then((user) => dispatch({type: RECEIVE_CURRENT_USER, user: null}));
 };
 
 // session errors

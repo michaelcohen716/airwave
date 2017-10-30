@@ -4,8 +4,9 @@ import { Link } from 'react-router-dom';
 import NavBarDropdownTV from './nav_bar_dropdown_tv';
 import NavBarDropdownMovies from './nav_bar_dropdown_movies';
 import NavBarDropdownAccount from './nav_bar_dropdown_account';
+import { withRouter } from 'react-router-dom';
 
-export const NavBar = ({currentUser, openModal, logout}) => {
+export const NavBar = ({currentUser, openModal, logout, history}) => {
 
   const freeTrialOrNot = currentUser === null ? "START YOUR FREE TRIAL" : "GET LIVE TV";
 
@@ -26,9 +27,9 @@ export const NavBar = ({currentUser, openModal, logout}) => {
 
         <div className="nav-bar-left">
 
-          <section className="airwave-logo">
+          <button className="airwave-logo" onClick={() => history.push('/')}>
             airwave
-          </section>
+          </button>
 
           <ul>
             <NavBarDropdownTV />
@@ -67,4 +68,4 @@ export const NavBar = ({currentUser, openModal, logout}) => {
 
 
 
-export default NavBar;
+export default withRouter(NavBar);

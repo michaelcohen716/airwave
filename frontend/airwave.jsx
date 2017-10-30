@@ -8,10 +8,10 @@ import videojs from 'video.js';
 
 
 document.addEventListener('DOMContentLoaded', () => {
-  let store;
+  window.store = undefined;
   const root = document.getElementById('root');
   if (window.currentUser){
-    store = configureStore({session: {currentUser: window.currentUser}});
+    store = configureStore({session: {currentUser: window.currentUser.user}, entities: {episodes: currentUser.episodes }});
     delete window.currentUser;
   } else {
     store = configureStore();
@@ -26,3 +26,10 @@ document.addEventListener('DOMContentLoaded', () => {
   window.dispatch = store.dispatch;
   window.videojs = videojs;
 });
+
+
+//TODOs
+//-reposition styling by % instead of fixed
+//-play button should toggle to pause
+//-make progress bar functional
+//-make play-bar sort of opaque
