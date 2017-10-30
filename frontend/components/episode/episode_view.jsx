@@ -1,16 +1,25 @@
 import React from 'react';
-require ('video.js');
-import vjs from 'video.js';
-// import EpisodeHolder from './episode_holder';
+// import PlayBar from './play_bar';
 
-var videoPlayer = require("video.js")
 
 class EpisodeView extends React.Component {
   constructor(props){
     super(props);
+    this.playOrPause = this.playOrPause.bind(this);
   }
 
+  playOrPause() {
+    if (this.video.paused) {
 
+      this.video.play();
+    } else{
+      this.video.pause();
+    }
+  }
+
+  componentDidMount(){
+
+  }
 
 
   render(){
@@ -19,13 +28,25 @@ class EpisodeView extends React.Component {
 
         <div className="episode-parent">
         </div>
-        <div className="video-container">
-          <video controls preload="auto" className="video">
+        <div className="video-tray">
 
-            <source src="//vjs.zencdn.net/v/oceans.mp4" type="video/mp4"></source>
-          </video>
+          <div className="video-container" id="episode">
+            <video ref={element => this.video = element}>
+
+              <source src="//vjs.zencdn.net/v/oceans.mp4" type="video/mp4"></source>
+            </video>
+
+            <div className="play-bar-parent">
+              <ul id="video-controls" ref={el => this.controls = el}>
+                <li><button onClick={this.playOrPause}>Play or Pause</button></li>
+
+              </ul>
+
+            </div>
+          </div>
         </div>
-    </div>
+
+      </div>
     );
   }
 

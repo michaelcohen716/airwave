@@ -4,6 +4,7 @@ import configureStore from './store/store';
 import Root from './components/root';
 import {signup, login, logout} from './actions/session_actions';
 const Modal = require('react-modal');
+import videojs from 'video.js';
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -23,5 +24,5 @@ document.addEventListener('DOMContentLoaded', () => {
   //test
   window.getState = store.getState;
   window.dispatch = store.dispatch;
-
+  window.videojs = videojs;
 });
