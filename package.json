@@ -14,12 +14,12 @@
     "redux": "^3.7.2",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.2.0",
-    "videojs": "^1.0.0",
+    "video.js": "6.2.8",
     "webpack": "^3.8.1"
   },
   "engines": {
-    "node": "6.7.0",
-    "npm": "3.10.7"
+    "node": "6.10.1",
+    "npm": "3.10.10"
   },
   "description": "This README would normally document whatever steps are necessary to get the application up and running.",
   "version": "1.0.0",
@@ -41,8 +41,5 @@
   "bugs": {
     "url": "https://github.com/michaelcohen716/airwave/issues"
   },
-  "homepage": "https://github.com/michaelcohen716/airwave#readme",
-  "devDependencies": {
-    "video.js": "^6.2.8"
-  }
+  "homepage": "https://github.com/michaelcohen716/airwave#readme"
 }

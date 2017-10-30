@@ -1,6 +1,9 @@
 import React from 'react';
-// require ('video.js');
+require ('video.js');
+import vjs from 'video.js';
 // import EpisodeHolder from './episode_holder';
+
+var videoPlayer = require("video.js")
 
 class EpisodeView extends React.Component {
   constructor(props){
@@ -17,7 +20,7 @@ class EpisodeView extends React.Component {
         <div className="episode-parent">
         </div>
         <div className="video-container">
-          <video controls autoplay preload="auto" className="video">
+          <video controls preload="auto" className="video">
 
             <source src="//vjs.zencdn.net/v/oceans.mp4" type="video/mp4"></source>
           </video>
@@ -28,5 +31,6 @@ class EpisodeView extends React.Component {
 
 
 }
+
 
 export default EpisodeView;

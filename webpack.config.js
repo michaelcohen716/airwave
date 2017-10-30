@@ -22,8 +22,8 @@ module.exports = {
   devtool: 'source-map',
   resolve: {
     extensions: [".js", ".jsx", "*"],
-    // alias: {
-    // webworkify$: 'webworkify-webpack'
-    // }
+    alias: {
+      webworkify$: 'webworkify-webpack'
+    }
   }
 };
