@@ -1,6 +1,6 @@
 import React from 'react';
 import videojs from 'video.js';
-import EpisodeHolder from './episode_holder';
+// import EpisodeHolder from './episode_holder';
 
 class EpisodeView extends React.Component {
   constructor(props){
