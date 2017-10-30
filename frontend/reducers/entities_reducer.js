@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
 
-// import   from './  _reducer';
+import watchlists from './watchlists_reducer';
 
 export default combineReducers({
-  
+  watchlists
 });

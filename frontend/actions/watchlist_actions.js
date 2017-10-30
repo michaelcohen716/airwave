@@ -7,10 +7,16 @@ export const addEpisode = episodeId => dispatch => {
   return WatchlistUtil.addEpisode(episodeId).then(dispatch(RECEIVE_WATCHLIST_ADD(episodeId)));
 };
 
-export const deleteEpisode = episodeId => dispatch => {
-  return WatchlistUtil.deleteEpisode(episodeId).then(dispatch(RECEIVE_WATCHLIST_ADD(null)));
+export const deleteEpisode = watchlistAddId => dispatch => {
+  return WatchlistUtil.deleteEpisode(watchlistAddId).then(dispatch(RECEIVE_WATCHLIST_ADD(null)));
 };
 
+export const receiveWatchlist = episodes => {
+  return {
+    type: RECEIVE_WATCHLIST,
+    episodes
+  };
+};
 
 export const receiveWatchlistAdd = (episodeId) => {
   return {

@@ -40,5 +40,8 @@
   "bugs": {
     "url": "https://github.com/michaelcohen716/airwave/issues"
   },
-  "homepage": "https://github.com/michaelcohen716/airwave#readme"
+  "homepage": "https://github.com/michaelcohen716/airwave#readme",
+  "devDependencies": {
+    "video.js": "^6.2.8"
+  }
 }

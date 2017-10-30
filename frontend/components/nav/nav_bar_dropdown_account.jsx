@@ -12,8 +12,8 @@ const NavBarDropdownAccount = ({currentUser, logout, openModal}) => {
       <div className="dropdown-content ">
         <div className="dropdown-content-holder account-dropdown-holder">
 
-          <div className="account-dropdown-expand">
-            <button className="dropdown-content-link">
+          <div className="account-dropdown-expand" id="hover-longer">
+            <button className="dropdown-content-link" id="hover-longer">
               Watchlist
             </button>
             <button className="dropdown-content-link">

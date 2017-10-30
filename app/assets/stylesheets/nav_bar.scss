@@ -144,11 +144,16 @@
   display: block;
   position: absolute;
   left: -15px;
+  transition-delay: 3s;
 }
 
 .dropdown-content-link:hover {
   display: block;
   color: #66aa33;
+}
+
+#hover-longer {
+
 }
 
 .dropdown-button:hover {

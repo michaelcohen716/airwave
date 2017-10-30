@@ -1,11 +1,11 @@
 import React from 'react';
-import Watchlist from './watchlist/watchlist';
+import WatchlistContainer from './watchlist/watchlist_container';
 
 const HomePageBody = () => {
 
   return (
     <div className="home-page-body">
-      <Watchlist />
+      <WatchlistContainer />
     </div>
   );
 };
