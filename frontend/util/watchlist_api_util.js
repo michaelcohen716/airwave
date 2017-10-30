@@ -20,3 +20,11 @@ export const fetchEpisodes = episodes => (
     data: { episodes }
   })
 );
+
+export const fetchShowEpisode = episodeId => (
+  $.ajax({
+    method: 'GET',
+    url: `api/episodes/${episodeId}`,
+    data: { episode }
+  })
+);

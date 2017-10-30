@@ -46,7 +46,7 @@ class EpisodeView extends React.Component {
   }
 
   componentDidMount(){
-    
+    // this.props.fetchShowEpisode(this.props.match.params.episodeId);
   }
 
 

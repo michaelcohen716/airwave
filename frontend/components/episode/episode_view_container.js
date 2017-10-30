@@ -1,11 +1,20 @@
 import { connect } from 'react-redux';
-// import NavBar from './nav_bar';
-// import { login, logout, signup } from '../../actions/session_actions';
-// import { openModal } from '../../actions/modal_actions';
+import EpisodeView from './episode_view';
+import { fetchShowEpisode } from '../../actions/episode_actions';
+import { withRouter } from 'react-router-dom';
 
-const mapStateToProps = state => {
+const mapStateToProps = (state, ownProps) => {
+  const episodeId = parseInt(ownProps.match.params.episodeId);
+
   return {
-    currentUser: state.session.currentUser,
-
+    episodeId: episodeId
   };
 };
+
+const mapDispatchToProps = dispatch => {
+  return {
+    fetchShowEpisode: (id) => dispatch(fetchShowEpisode(id))
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(EpisodeView);

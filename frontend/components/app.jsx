@@ -14,7 +14,7 @@ import { connect } from 'react-redux';
 import LogInContainer from './session/login_form_container';
 import SignUpContainer from './session/signup_form_container';
 import HomePageBody from './home_page_body';
-import EpisodeView from './episode/episode_view';
+import EpisodeViewContainer from './episode/episode_view_container';
 
 const App = ({ modal, closeModal }) => {
   return (
@@ -25,7 +25,7 @@ const App = ({ modal, closeModal }) => {
       <SessionModal component={modal === "login" ? LogInContainer : SignUpContainer}
         modal={modal}
         closeModal={closeModal} />
-      <Route exact path="/episodes/:episodeId" component={EpisodeView} />
+      <Route exact path="/episodes/:episodeId" component={EpisodeViewContainer} />
     </div>
   );
 };

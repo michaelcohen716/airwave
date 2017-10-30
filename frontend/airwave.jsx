@@ -33,3 +33,4 @@ document.addEventListener('DOMContentLoaded', () => {
 //-play button should toggle to pause
 //-make progress bar functional
 //-make play-bar sort of opaque
+//-render errors
