@@ -15,6 +15,21 @@ WatchlistAdd.create!(
   episode_id: 1
 )
 
+WatchlistAdd.create!(
+  user_id: 2,
+  episode_id: 1
+)
+
+WatchlistAdd.create!(
+  user_id: 2,
+  episode_id: 1
+)
+
+WatchlistAdd.create!(
+  user_id: 2,
+  episode_id: 1
+)
+
 Series.create!(
   name: "You Bet Your Life with Groucho Marx",
   description: "A classic 1950's quiz show with a humorous twist, 'You Bet Your Life' proved popular with critics and fans alike"

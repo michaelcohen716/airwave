@@ -21,7 +21,6 @@ const App = ({ modal, closeModal }) => {
     <div className="parent-parent">
       <NavBarContainer />
       <Route exact path="/" component={ShowcaseComponent} />
-      <Route exact path="/" component={HomePageBody} />
       <SessionModal component={modal === "login" ? LogInContainer : SignUpContainer}
         modal={modal}
         closeModal={closeModal} />
@@ -29,6 +28,7 @@ const App = ({ modal, closeModal }) => {
     </div>
   );
 };
+// <Route exact path="/" component={HomePageBody} />
 
 const mapStateToProps = ({ ui: {modal }}) => {
   return {

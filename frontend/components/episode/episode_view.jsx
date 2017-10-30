@@ -8,6 +8,7 @@ class EpisodeView extends React.Component {
     this.playOrPause = this.playOrPause.bind(this);
     this.rewind = this.rewind.bind(this);
     this.forward = this.forward.bind(this);
+    this.changeVolume = this.changeVolume.bind(this);
   }
 
   playOrPause() {
@@ -25,6 +26,14 @@ class EpisodeView extends React.Component {
 
   forward(){
     this.video.currentTime += 1;
+  }
+
+  changeVolume(){
+    if (this.video.volume === 0){
+      this.video.volume = 1;
+    } else {
+      this.video.volume = 0;
+    }
   }
 
   updateProgress(){
@@ -86,7 +95,10 @@ class EpisodeView extends React.Component {
 
                 {progressBarStyle}
 
+                <button className="play-bar-volume fa fa-volume-up"
+                        onClick={this.changeVolume}>
 
+                </button>
               </section>
 
             </div>
