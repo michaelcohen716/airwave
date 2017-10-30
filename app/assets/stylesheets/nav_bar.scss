@@ -11,9 +11,11 @@
 }
 
 .nav-bar-right {
+  width: 15%;
   display: flex;
   padding-right: 115px;
   align-items: center;
+  justify-content: flex-end;
 }
 .nav-bar-left {
   display: flex;

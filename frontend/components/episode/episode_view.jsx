@@ -37,10 +37,13 @@ class EpisodeView extends React.Component {
             </video>
 
             <div className="play-bar-parent">
-              <ul id="video-controls" ref={el => this.controls = el}>
-                <li><button onClick={this.playOrPause}>Play or Pause</button></li>
+              <div className="play-bar-background">
+              </div>
+              <section id="video-controls" ref={el => this.controls = el}>
+                <button className="play-bar-play fa fa-play" onClick={this.playOrPause}></button>
+                <button className="play-bar-rewind fa fa-step-backward" onClick={this.playOrPause}></button>
 
-              </ul>
+              </section>
 
             </div>
           </div>

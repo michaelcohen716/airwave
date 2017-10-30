@@ -7,9 +7,12 @@
 }
 
 .video-container {
-  left: 8.5%;
-  margin-top: 40px;
+  left: 9%;
+  margin-right: 13px;
+  margin-left: 10px;
+  margin-top: 60px;
   position: absolute;
+
 }
 
 .video-tray {
@@ -17,27 +20,55 @@
 }
 
 .episode-grandparent {
-
+  width: 100%;
 }
 
 .play-bar-parent {
-  width: 100%;
-  height: 10%;
+  width: 70%;
+  height: 14%;
   position: absolute;
-  bottom: 100px;
+  bottom: 15px;
   display: flex;
-  // margin-left: 12.5%;
-  // margin-right: 12.5%;
-  background: red;
+  margin-left: 15%;
+  background: black;
+  // opacity: 0.1;
+
+  border-bottom: 0.5px solid gray;
+  font-size: 24px;
 }
 
-.video-controls {
+.play-bar-background {
+  opacity: 0.1;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 15px;
+  background: black;
+  z-index: -1;
+}
+
+.play-bar-play {
+  margin-left: 3%;
+  color: white;
+}
+
+.play-bar-rewind {
+  margin-left: 4%;
+  color: white;
+}
+
+.fa-play {
+  font-size: 54px;
+}
+
+#video-controls {
   margin: auto;
+  width: 100%;
 }
 
 video {
-  height: 550px;
-  width: 120%;
+  // height: 650px;
+  // width: 110%;
 }
 
 .vsc-controller {
