@@ -1,5 +1,5 @@
 import React from 'react';
-import videojs from 'video.js';
+// require ('video.js');
 // import EpisodeHolder from './episode_holder';
 
 class EpisodeView extends React.Component {
