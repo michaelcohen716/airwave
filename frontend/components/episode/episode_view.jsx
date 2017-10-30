@@ -17,7 +17,7 @@ class EpisodeView extends React.Component {
         <div className="episode-parent">
         </div>
         <div className="video-container">
-          <video controls autoplay preload="auto">
+          <video controls autoplay preload="auto" className="video">
 
             <source src="//vjs.zencdn.net/v/oceans.mp4" type="video/mp4"></source>
           </video>

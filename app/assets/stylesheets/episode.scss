@@ -6,20 +6,24 @@
   position: absolute;
 }
 
-.video-js {
-  
-}
+
 
 .video-container {
-  left: 10%;
+  left: 15%;
+  right: 15%;
+  // top: 10%;
   position: absolute;
-  width: 200px;
-  height: 200px;
+  // width: 80%;
+  // height: 80%;
+
 
 }
 
 .episode-grandparent {
-  // position: relative;
-  // width: 100%;
-  // height: 600px;
+
+}
+
+video {
+  height: 550px;
+  width: 975px;
 }
