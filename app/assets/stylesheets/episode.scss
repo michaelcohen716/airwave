@@ -25,15 +25,15 @@
 }
 
 .play-bar-parent {
-  width: 70%;
+  width: 75%;
   height: 14%;
   position: absolute;
   bottom: 15px;
   display: flex;
-  margin-left: 15%;
+  margin-left: 12.5%;
   background: black;
   border-bottom: 0.5px solid gray;
-  font-size: 24px;
+  font-size: 21px;
 }
 
 .play-bar-background {
@@ -85,10 +85,16 @@
   color: white;
 }
 
-// video {
-  // height: 650px;
-  // width: 110%;
-// }
+.play-bar-settings {
+  margin-left: 2%;
+  color: white;
+}
+
+.play-bar-fullscreen {
+  margin-left: 2%;
+  color: white;
+}
+
 
 .vsc-controller {
   display: none;

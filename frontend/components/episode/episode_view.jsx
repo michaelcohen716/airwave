@@ -9,6 +9,7 @@ class EpisodeView extends React.Component {
     this.rewind = this.rewind.bind(this);
     this.forward = this.forward.bind(this);
     this.changeVolume = this.changeVolume.bind(this);
+    this.renderFullscreen = this.renderFullscreen.bind(this);
   }
 
   playOrPause() {
@@ -34,6 +35,11 @@ class EpisodeView extends React.Component {
     } else {
       this.video.volume = 0;
     }
+  }
+
+  renderFullscreen(){
+    this.video.requestFullscreen();
+
   }
 
   updateProgress(){
@@ -97,6 +103,12 @@ class EpisodeView extends React.Component {
 
                 <button className="play-bar-volume fa fa-volume-up"
                         onClick={this.changeVolume}>
+                </button>
+                <button className="play-bar-settings fa fa-cog">
+
+                </button>
+                <button className="play-bar-fullscreen fa fa-arrows-alt"
+                        onClick={this.renderFullscreen}>
 
                 </button>
               </section>
