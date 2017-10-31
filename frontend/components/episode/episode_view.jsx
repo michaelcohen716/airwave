@@ -61,8 +61,13 @@ class EpisodeView extends React.Component {
   }
 
   componentDidMount(){
-    // debugger
     this.props.fetchShowEpisode(this.props.match.params.episodeId);
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if(this.props.match.params.episodeId !== nextProps.match.params.episodeId) {
+      this.props.fetchShowEpisode(nextProps.match.params.episodeId);
+    }
   }
 
 
