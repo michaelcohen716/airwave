@@ -13,11 +13,19 @@
   margin-top: 60px;
   position: absolute;
   box-shadow: 0px 0px 5px #3c3c3c;
-  // border: 1px groove black;
+  min-width: 1000px;
+
+}
+
+.vsc-initialized {
+  height: 500px;
+  width: -webkit-fill-available;
+  background: black;
 }
 
 .video-tray {
-
+  height: 500px;
+  width: 1000px;
 }
 
 .episode-grandparent {
@@ -95,9 +103,12 @@
   color: white;
 }
 
-video {
-  width: 170%;
-  height: 100%;
+video#episode {
+  // position: absolute;
+  // z-index: 0;
+  // min-width: 1000px;
+  // min-height: 500px;
+  // object-fit: cover;
 }
 
 .vsc-controller {
