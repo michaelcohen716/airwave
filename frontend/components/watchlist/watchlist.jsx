@@ -4,7 +4,6 @@ import WatchlistItem from './watchlist_item';
 
 
 const Watchlist = ({currentUser, episodes}) => {
-  const episode0 = episodes[0];
 
   const watchlistItems = episodes.map((e) => {
     return (

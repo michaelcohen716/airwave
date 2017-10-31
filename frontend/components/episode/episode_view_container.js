@@ -7,7 +7,7 @@ const mapStateToProps = (state, ownProps) => {
   const episodeId = parseInt(ownProps.match.params.episodeId);
 
   return {
-    episodeId: episodeId
+    episode: state.entities.episodes[episodeId]
   };
 };
 

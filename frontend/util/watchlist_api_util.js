@@ -16,15 +16,13 @@ export const deleteEpisode = watchlistAddId => (
 export const fetchEpisodes = episodes => (
   $.ajax({
     method: 'GET',
-    url: 'api/watchlist_adds',
-    data: { episodes }
+    url: 'api/watchlist_adds'
   })
 );
 
 export const fetchShowEpisode = episodeId => (
   $.ajax({
     method: 'GET',
-    url: `api/episodes/${episodeId}`,
-    data: { episode }
+    url: `api/episodes/${episodeId}`
   })
 );

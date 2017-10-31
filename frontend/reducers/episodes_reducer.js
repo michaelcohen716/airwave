@@ -1,6 +1,6 @@
 import merge from 'lodash/merge';
 
-import { RECEIVE_WATCHLIST, RECEIVE_WATCHLIST_ADD } from '../actions/watchlist_actions';
+import { RECEIVE_WATCHLIST, RECEIVE_WATCHLIST_ADD, RECEIVE_SHOW_EPISODE } from '../actions/episode_actions';
 import {RECEIVE_CURRENT_USER} from '../actions/session_actions';
 
 const WatchlistsReducer = (state = {}, action) => {
@@ -13,6 +13,9 @@ const WatchlistsReducer = (state = {}, action) => {
       return action.episodes;
     case RECEIVE_CURRENT_USER:
       return merge({}, state, action.episodes);
+    case RECEIVE_SHOW_EPISODE:
+      
+      return merge({}, state, {[action.episode.id]: action.episode} );
     default:
       return state;
   }
