@@ -129,9 +129,22 @@ class EpisodeView extends React.Component {
               <span className="episode-show-episode">{episodeName}</span>
             </div>
             <section className="video-engagement-bar">
-              <button className="engagement-details fa fa-info-circle">
-              </button>
-              <span className="engagement-details-text"> details</span>
+
+              <button className="engagement-details fa fa-info-circle" id="info-circle"></button>
+              <button className="engagement-details-text"> details</button>
+
+              <button className="engagement-comments fa fa-comment" id="comments-logo"></button>
+              <button className="engagement-comments-text"> comments</button>
+
+              <button className="engagement-tweet fa fa-twitter" id="tweets-logo"></button>
+              <button className="engagement-tweet-text"> tweet</button>
+
+              <button className="engagement-facebook fa fa-facebook-square" id="facebook-logo"></button>
+              <button className="engagement-facebook-text"> facebook</button>
+
+              <button className="engagement-share fa fa-share" id="share-logo"></button>
+              <button className="engagement-share-text"> share</button>
+
             </section>
           </div>
 
