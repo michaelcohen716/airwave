@@ -67,7 +67,13 @@ class EpisodeView extends React.Component {
 
 
   render(){
+
+
     if(this.props.episode){
+      const fullTitle = this.props.episode.title;
+      const showName = fullTitle.substr(0, fullTitle.indexOf(':'));
+      const episodeName = fullTitle.split(':')[1];
+
       var progressBarStyle =
       (<progress className="play-bar-progress" id="progress-bar" max='100' value="0">
       <span id="progress-bar-render">0</span>%played
@@ -117,6 +123,16 @@ class EpisodeView extends React.Component {
 
               </div>
             </div>
+            <div className="video-description-box">
+              <span className="episode-airwave-logo">airwave</span>
+              <span className="episode-show-show">{showName}</span>
+              <span className="episode-show-episode">{episodeName}</span>
+            </div>
+            <section className="video-engagement-bar">
+              <button className="engagement-details fa fa-info-circle">
+              </button>
+              <span className="engagement-details-text"> details</span>
+            </section>
           </div>
 
         </div>
