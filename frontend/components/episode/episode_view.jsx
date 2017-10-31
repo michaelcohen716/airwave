@@ -70,7 +70,7 @@ class EpisodeView extends React.Component {
     }
   }
 
-
+  //come back here if not rendering
   render(){
 
 

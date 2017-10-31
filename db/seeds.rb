@@ -17,17 +17,17 @@ WatchlistAdd.create!(
 
 WatchlistAdd.create!(
   user_id: 2,
-  episode_id: 1
+  episode_id: 2
 )
 
 WatchlistAdd.create!(
   user_id: 2,
-  episode_id: 1
+  episode_id: 3
 )
 
 WatchlistAdd.create!(
   user_id: 2,
-  episode_id: 1
+  episode_id: 4
 )
 
 Series.create!(

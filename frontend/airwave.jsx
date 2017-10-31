@@ -5,6 +5,7 @@ import Root from './components/root';
 import {signup, login, logout} from './actions/session_actions';
 const Modal = require('react-modal');
 import videojs from 'video.js';
+import { fetchRandomWatchlist } from './actions/watchlist_actions';
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -24,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
   //test
   window.getState = store.getState;
   window.dispatch = store.dispatch;
-  window.videojs = videojs;
+  window.fetchRandomWatchlist = fetchRandomWatchlist;
 });
 
 

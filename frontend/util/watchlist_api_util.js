@@ -1,3 +1,34 @@
+export const fetchWatchlist = () => (
+  $.ajax({
+    method: 'GET',
+    url: 'api/watchlist_adds'
+  })
+);
+
+export const fetchRandomWatchlist = () => (
+  $.ajax({
+    method: 'GET',
+    url: 'api/random_watchlist'
+  })
+);
+
+export const fetchShowEpisode = episodeId => (
+  $.ajax({
+    method: 'GET',
+    url: `api/episodes/${episodeId}`
+  })
+);
+
+
+
+
+
+
+
+
+
+
+
 export const addEpisode = episodeId => (
   $.ajax({
     method: 'POST',
@@ -10,19 +41,5 @@ export const deleteEpisode = watchlistAddId => (
   $.ajax({
     method: "DELETE",
     url: `api/watchlist_add/${watchlistAddId}`
-  })
-);
-
-export const fetchEpisodes = episodes => (
-  $.ajax({
-    method: 'GET',
-    url: 'api/watchlist_adds'
-  })
-);
-
-export const fetchShowEpisode = episodeId => (
-  $.ajax({
-    method: 'GET',
-    url: `api/episodes/${episodeId}`
   })
 );

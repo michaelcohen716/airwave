@@ -3,27 +3,49 @@ import WatchlistItem from './watchlist_item';
 
 
 
-const Watchlist = ({currentUser, episodes}) => {
+class Watchlist extends React.Component {
 
-  const watchlistItems = episodes.map((e) => {
+  // componentDidMount(){
+    // if (!this.props.episodes){
+    //   // const
+    // }
+    // else {
+  // }
+
+  constructor(props){
+    super(props);
+  }
+
+
+
+  render(){
+    if (this.props.episodes){
+      const watchlistItems = this.props.episodes.map((e) => {
+
+        return (
+          <WatchlistItem episode={e} key={e.id} />
+        );
+      });
+
+    const currentUserOrNot = this.props.currentUser ? this.props.currentUser.username : "GUEST";
+
+
     return (
-      <WatchlistItem episode={e} key={e.id} />
-    )
-  })
+      <div className="watchlist-parent">
+        <section className="watchlist-topbar">
+          <button className="watchlist-topbar-title">
+            {currentUserOrNot}{`'`}s Watchlist
+          </button>
+        </section>
+        <section className="watchlist-index">
+          {watchlistItems}
+        </section>
+      </div>
+    );
+  }
 
+}
+}
 
-  return (
-    <div className="watchlist-parent">
-      <section className="watchlist-topbar">
-        <button className="watchlist-topbar-title">
-
-        </button>
-      </section>
-      <section className="watchlist-index">
-        {watchlistItems}
-      </section>
-    </div>
-  );
-};
 
 export default Watchlist;

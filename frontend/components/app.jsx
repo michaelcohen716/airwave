@@ -24,11 +24,11 @@ const App = ({ modal, closeModal }) => {
       <SessionModal component={modal === "login" ? LogInContainer : SignUpContainer}
         modal={modal}
         closeModal={closeModal} />
+      <Route exact path="/" component={HomePageBody} />
       <Route exact path="/episodes/:episodeId" component={EpisodeViewContainer} />
     </div>
   );
 };
-// <Route exact path="/" component={HomePageBody} />
 
 const mapStateToProps = ({ ui: {modal }}) => {
   return {

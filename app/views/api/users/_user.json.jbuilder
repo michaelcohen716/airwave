@@ -6,7 +6,7 @@ end
 json.episodes do
   user.watchlist_episodes.limit(4).each do |episode|
     json.set! episode.id do
-      json.extract! episode, :title, :description
+      json.partial! 'api/episodes/episode.json.jbuilder', episode: episode
     end
   end
 end
