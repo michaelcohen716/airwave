@@ -1,6 +1,7 @@
 json.user do
   json.extract! user, :id, :username
   json.watchlistIds user.watchlist_episode_ids
+  json.seriesIds user.watchlist_series_ids
 end
 
 json.episodes do
