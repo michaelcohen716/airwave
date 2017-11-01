@@ -47,17 +47,14 @@
   z-index: 1;
 }
 
-.play-bar-background {
-  // opacity: 0.1;
-  // width: 100%;
-  // height: 100%;
-  // position: absolute;
-  // bottom: 15px;
-  // background: #36454f;
-  // z-index: -1;
-}
+
 
 .play-bar-play {
+  margin-left: 3%;
+  color: white;
+}
+
+.play-bar-pause {
   margin-left: 3%;
   color: white;
 }
@@ -246,8 +243,6 @@
   text-shadow: rgba(1, 1, 1, 0.5) 0px 1px;
   vertical-align: text-top;
 }
-
-
 
 .vsc-controller {
   display: none;

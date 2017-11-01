@@ -1,6 +1,5 @@
 import React from 'react';
-// import PlayBar from './play_bar';
-
+import EpisodeShowWatchlist from './episode_show_watchlist';
 
 class EpisodeView extends React.Component {
   constructor(props){
@@ -10,14 +9,18 @@ class EpisodeView extends React.Component {
     this.forward = this.forward.bind(this);
     this.changeVolume = this.changeVolume.bind(this);
     this.renderFullscreen = this.renderFullscreen.bind(this);
+    this.state = {
+      paused: true
+    };
   }
 
   playOrPause() {
     if (this.video.paused) {
-
       this.video.play();
+      this.setState({ paused: false});
     } else{
       this.video.pause();
+      this.setState({ paused: true});
     }
   }
 
@@ -44,10 +47,10 @@ class EpisodeView extends React.Component {
 
   updateProgress(){
     this.video.addEventListener('timeupdate', function() {
-      let percentCompleted = Math.floor((100 / this.video.duration * video.currentTime));
       const progressBar = document.getElementById("progress-bar");
+      let percentCompleted = Math.floor((100 / this.video.duration * this.video.currentTime));
       progressBar.value = percentCompleted;
-      progressBar.getElementById("progress-bar-render")[0].innerHTML = percentCompleted;
+      progressBar.innerHTML = percentCompleted;
 
     }, false);
   }
@@ -63,7 +66,6 @@ class EpisodeView extends React.Component {
   componentDidMount(){
     this.props.fetchShowEpisode(this.props.match.params.episodeId);
   }
-  // this.video.load();
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.episode) {
@@ -76,17 +78,15 @@ class EpisodeView extends React.Component {
     }
   }
 
-  //come back here if not rendering
   render(){
 
-// debugger
     if(this.props.episode){
       const fullTitle = this.props.episode.title;
       const showName = fullTitle.substr(0, fullTitle.indexOf(':'));
       const episodeName = fullTitle.split(':')[1];
 
       var progressBarStyle =
-      (<progress className="play-bar-progress" id="progress-bar" max='100' value="0">
+      (<progress className="play-bar-progress" id="progress-bar" min="0" max="100" value="0">
       <span id="progress-bar-render">0</span>%played
       </progress>);
 
@@ -108,7 +108,7 @@ class EpisodeView extends React.Component {
                 <div className="play-bar-background">
                 </div>
                 <section id="video-controls" ref={el => this.controls = el}>
-                  <button className="play-bar-play fa fa-play"
+                  <button className={(this.state.paused) ? "play-bar-play fa fa-play" : "play-bar-pause fa fa-pause"}
                     onClick={this.playOrPause}>
                   </button>
                   <button className="play-bar-rewind fa fa-step-backward"
@@ -158,7 +158,6 @@ class EpisodeView extends React.Component {
 
             </section>
           </div>
-
         </div>
 
       );

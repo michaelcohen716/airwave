@@ -3,6 +3,13 @@ import {Link} from 'react-router-dom';
 import { connect } from 'react-redux';
 
 class WatchlistItem extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      inWatchlist: true
+    };
+  }
+
   render(){
 
     const randUnwatched = Math.floor(Math.random() * 30);
@@ -13,6 +20,9 @@ class WatchlistItem extends React.Component {
           {randUnwatched} Unwatched
         </div>
         <div className="watchlist-item-thumb">
+          <button className={(this.state.inWatchlist) ? "watchlist-badge fa fa-check" : "watchlist-badge fa fa-plus"}>
+
+          </button>
           <button className="watchlist-item-thumb-pic">
             <img src={this.props.series.imageUrl}/>
           </button>
@@ -38,6 +48,8 @@ const mapStateToProps = (state, { episode }) => {
     series
   };
 };
+
+// const mapDispatchToProps =
 
 
 

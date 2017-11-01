@@ -9,17 +9,11 @@ class Watchlist extends React.Component {
     super(props);
   }
 
-
   render(){
     if (this.props.episodes ){
-
-
-
       const watchlistItems = this.props.episodes.map((e) => {
-
         return (
           <WatchlistItem episode={e} key={e.id}/>
-
         );
       });
 
