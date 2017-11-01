@@ -1,11 +1,12 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 class WatchlistItem extends React.Component {
 
   render(){
     const randUnwatched = Math.floor(Math.random() * 50);
     return (
-      <div className="watchlist-item-outer">
+      <Link to={`/episodes/${this.props.episode.id}`} className="watchlist-item-outer">
         <div className="watchlist-item-status">
           {randUnwatched} Unwatched
         </div>
@@ -21,7 +22,7 @@ class WatchlistItem extends React.Component {
             {this.props.episode.title}
           </button>
         </section>
-      </div>
+      </Link>
     );
 
   }
