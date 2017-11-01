@@ -15,7 +15,6 @@ class SessionForm extends React.Component {
   handleSubmit(e){
     // e.preventDefault();
     const user = Object.assign({}, this.state);
-    debugger
     this.props.submitAction(user).then(()=> this.props.history.push('/')).then(this.props.closeModal);
   }
 
@@ -104,13 +103,13 @@ class SessionForm extends React.Component {
                   <span className="forgot-password">
                     Forgot your password/email?
                   </span>
-                  <div  value="DemoLogIn"
+                  <input type="submit" value={submitText}
+                                       className="login-button"/>
+                  <button  value="DemoLogIn"
                                        onClick={this.demoLogin}
                                        className="demo-login">
                                        Demo Log In
-                  </div>
-                  <input type="submit" value={submitText}
-                                       className="login-button"/>
+                  </button>
                 </form>
                 <ul>{this.renderErrors()}</ul>
               </div>

@@ -25,7 +25,7 @@ const App = ({ modal, closeModal }) => {
         modal={modal}
         closeModal={closeModal} />
       <Route exact path="/" component={HomePageBody} />
-      <Route exact path="/episodes/:episodeId" component={EpisodeViewContainer} />
+      <Route path="/episodes/:episodeId" component={EpisodeViewContainer} />
     </div>
   );
 };
