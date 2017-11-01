@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 class WatchlistItem extends React.Component {
 
   render(){
-    const randUnwatched = Math.floor(Math.random() * 50);
+    const randUnwatched = Math.floor(Math.random() * 30);
     return (
       <Link to={`/episodes/${this.props.episode.id}`} className="watchlist-item-outer">
         <div className="watchlist-item-status">

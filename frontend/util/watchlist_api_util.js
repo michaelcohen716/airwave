@@ -5,12 +5,12 @@ export const fetchWatchlist = () => (
   })
 );
 
-export const fetchRandomWatchlist = () => (
-  $.ajax({
-    method: 'GET',
-    url: 'api/random_watchlist'
-  })
-);
+// export const fetchRandomWatchlist = () => (
+//   $.ajax({
+//     method: 'GET',
+//     url: 'api/random_watchlist'
+//   })
+// );
 
 export const fetchShowEpisode = episodeId => (
   $.ajax({
@@ -19,7 +19,12 @@ export const fetchShowEpisode = episodeId => (
   })
 );
 
-
+export const fetchSeries = seriesId => {
+  return $.ajax({
+    method: 'GET',
+    url: `api/series/${seriesId}`
+  });
+};
 
 
 

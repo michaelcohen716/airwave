@@ -5,13 +5,6 @@ import WatchlistItem from './watchlist_item';
 
 class Watchlist extends React.Component {
 
-  // componentDidMount(){
-    // if (!this.props.episodes){
-    //   // const
-    // }
-    // else {
-  // }
-
   constructor(props){
     super(props);
   }

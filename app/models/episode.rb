@@ -8,5 +8,9 @@ class Episode < ApplicationRecord
     foreign_key: :episode_id,
     class_name: 'WatchlistAdd'
 
+  belongs_to :series,
+    primary_key: :id,
+    foreign_key: :series_id,
+    class_name: :Series
 
 end

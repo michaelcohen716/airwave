@@ -10,3 +10,11 @@ json.episodes do
     end
   end
 end
+
+json.series do
+  user.watchlist_series.limit(4).each do |series|
+    json.set! series.id do
+      json.partial! 'api/series/series.json.jbuilder', series: series
+    end
+  end
+end

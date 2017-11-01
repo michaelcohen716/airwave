@@ -13,19 +13,29 @@ const mapStateToProps = state => {
   if (!watchlistIds) {
     watchlistIds = [];
   }
+
   let watchlistEpisodes = watchlistIds.map(id => {
     return state.entities.episodes[id];
-
   });
+
+  let watchlistEpisodeIds = watchlistEpisodes.map(epi => {
+    return epi.series_id;
+  });
+
+  let watchlistSeries = watchlistEpisodeIds.map(id => {
+    return state.entities.series[id];
+  });
+
   return {
     currentUser: state.session.currentUser,
-    episodes: watchlistEpisodes
+    episodes: watchlistEpisodes,
+    series: watchlistSeries
   };
 };
 
 const mapDispatchToProps = dispatch => {
   return {
-    fetchRandomWatchlist: () => dispatch(fetchRandomWatchlist()),
+
     addEpisode: episodeId => dispatch(addEpisode(episodeId)),
     deleteEpisode: watchlistAddId => dispatch(deleteEpisode(watchlistAddId))
   };

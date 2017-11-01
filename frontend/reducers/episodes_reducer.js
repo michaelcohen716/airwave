@@ -1,7 +1,7 @@
 import merge from 'lodash/merge';
 
 import { RECEIVE_WATCHLIST, RECEIVE_WATCHLIST_ADD, RECEIVE_SHOW_EPISODE } from '../actions/episode_actions';
-import {RECEIVE_CURRENT_USER} from '../actions/session_actions';
+import { RECEIVE_CURRENT_USER } from '../actions/session_actions';
 
 const EpisodesReducer = (state = {}, action) => {
   Object.freeze(state);

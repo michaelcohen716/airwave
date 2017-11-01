@@ -2,8 +2,7 @@ import * as WatchlistUtil from '../util/watchlist_api_util';
 
 export const RECEIVE_WATCHLIST_ADD = "RECEIVE_WATCHLIST_ADD";
 export const RECEIVE_WATCHLIST = "RECEIVE_WATCHLIST";
-
-
+export const RECEIVE_SERIES = "RECEIVE_SERIES";
 
 export const receiveWatchlist = ({episodes}) => {
   return {
@@ -16,13 +15,21 @@ export const fetchWatchlist = () => dispatch => {
   return WatchlistUtil.fetchWatchlist().then(payload => dispatch(RECEIVE_WATCHLIST(payload)));
 }
 
-export const fetchRandomWatchlist = () => dispatch => {
-  return WatchlistUtil.fetchRandomWatchlist().then(payload => dispatch(RECEIVE_WATCHLIST(payload)));
+// export const fetchRandomWatchlist = () => dispatch => {
+//   return WatchlistUtil.fetchRandomWatchlist().then(payload => dispatch(RECEIVE_WATCHLIST(payload)));
+// }
+
+export const fetchSeries = () => dispatch => {
+  return WatchlistUtil.fetchSeries().then(series => dispatch(RECEIVE_SERIES(series)));
 }
 
-
-
-
+// singular series
+export const receiveSeries = ({series}) => {
+  return {
+    type: RECEIVE_SERIES,
+    series
+  }
+}
 
 
 

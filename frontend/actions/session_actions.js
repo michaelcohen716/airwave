@@ -2,10 +2,11 @@ import * as SessionAPIUtil from '../util/session_api_util';
 
 export const RECEIVE_CURRENT_USER = 'RECEIVE_CURRENT_USER';
 
-export const receiveCurrentUser = ({user, episodes}) => ({
+export const receiveCurrentUser = ({user, episodes, series}) => ({
   type: RECEIVE_CURRENT_USER,
   user,
-  episodes
+  episodes,
+  series
 });
 
 export const signup = (user) => (dispatch) => {

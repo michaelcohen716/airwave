@@ -13,7 +13,12 @@ class User < ApplicationRecord
 
   has_many :watchlist_episodes,
     through: :watchlist_adds,
-    source: :episode  
+    source: :episode
+
+  has_many :watchlist_series,
+    -> { distinct },
+    through: :watchlist_episodes,
+    source: :series
 
 
   def self.find_by_credentials(username, password)
