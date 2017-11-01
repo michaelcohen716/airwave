@@ -5,6 +5,7 @@ class SessionForm extends React.Component {
   constructor(props){
     super(props);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.demoLogin = this.demoLogin.bind(this);
     this.state = {
       username: "",
       password: ""
@@ -12,8 +13,9 @@ class SessionForm extends React.Component {
   }
 
   handleSubmit(e){
-    e.preventDefault();
+    // e.preventDefault();
     const user = Object.assign({}, this.state);
+    debugger
     this.props.submitAction(user).then(()=> this.props.history.push('/')).then(this.props.closeModal);
   }
 
@@ -24,10 +26,11 @@ class SessionForm extends React.Component {
   }
 
   renderErrors(){
+    // debugger
     return (
       <ul>
         {this.props.errors.map((error, i) => (
-          <li key={`error-${i}`}>
+          <li key={i}>
             {error}
           </li>
         ))}
@@ -43,7 +46,14 @@ class SessionForm extends React.Component {
     }
   }
 
+  demoLogin(e){
+    const demoUser = {username: "maurice", password: "password"};
+    // this.setState({username: "maurice", password: "password"});
+    this.props.submitAction(demoUser).then(()=> this.props.history.push('/')).then(this.props.closeModal);
+  }
+
   render(){
+
 
     const submitText = this.props.formType === "login" ? "Log in" : "Sign up";
     const actionText = this.props.formType === "login" ? "Log in to Airwave" : "Sign up for Airwave";
@@ -76,7 +86,6 @@ class SessionForm extends React.Component {
 
             <section className="session-column">
               <div className="session-column-airwave">
-                {this.renderErrors()}
                 <form onSubmit={this.handleSubmit} className="session-form-box">
                   <span className="airwave-login-head">{actionText}</span>
 
@@ -95,9 +104,15 @@ class SessionForm extends React.Component {
                   <span className="forgot-password">
                     Forgot your password/email?
                   </span>
+                  <div  value="DemoLogIn"
+                                       onClick={this.demoLogin}
+                                       className="demo-login">
+                                       Demo Log In
+                  </div>
                   <input type="submit" value={submitText}
                                        className="login-button"/>
                 </form>
+                <ul>{this.renderErrors()}</ul>
               </div>
             </section>
           </div>
