@@ -63,8 +63,14 @@ class EpisodeView extends React.Component {
   componentDidMount(){
     this.props.fetchShowEpisode(this.props.match.params.episodeId);
   }
+  // this.video.load();
 
   componentWillReceiveProps(nextProps) {
+    if (nextProps.episode) {
+      if(this.video){
+        this.video.load();
+      }
+    }
     if(this.props.match.params.episodeId !== nextProps.match.params.episodeId) {
       this.props.fetchShowEpisode(nextProps.match.params.episodeId);
     }
@@ -73,7 +79,7 @@ class EpisodeView extends React.Component {
   //come back here if not rendering
   render(){
 
-
+// debugger
     if(this.props.episode){
       const fullTitle = this.props.episode.title;
       const showName = fullTitle.substr(0, fullTitle.indexOf(':'));

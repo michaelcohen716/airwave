@@ -1,6 +1,6 @@
 .episode-parent {
   background: #3c3c3c;
-  width: 100%;
+  width: 120%;
   height: 700px;
   filter: brightness(100%);
   position: absolute;
@@ -41,18 +41,20 @@
   display: flex;
   margin-left: 10%;
   background: black;
+  opacity: 0.5;
   border-bottom: 0.5px solid gray;
   font-size: 21px;
+  z-index: 1;
 }
 
 .play-bar-background {
-  opacity: 0.1;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  bottom: 15px;
-  background: #36454f;
-  z-index: -1;
+  // opacity: 0.1;
+  // width: 100%;
+  // height: 100%;
+  // position: absolute;
+  // bottom: 15px;
+  // background: #36454f;
+  // z-index: -1;
 }
 
 .play-bar-play {
@@ -120,13 +122,13 @@
 
 .episode-airwave-logo {
   position: relative;
-  margin-top: 15%;
+  // margin-top: 10%;
   color: #dddddd;
-  font-size: 24px;
+  font-size: 28px;
   font-family: Futura, "Trebuchet MS", Arial, sans-serif;
   font-weight: 200;
   margin-left: 3px;
-  vertical-align: top;
+  vertical-align: baseline;
 }
 
 .episode-show-show {

@@ -11,26 +11,32 @@
 
 
 .showcase-text {
-  width: 35%;
+  width: 400px;
   height: 60%;
   position: absolute;
-  top: 135px;
-  left: 90px;
+  // top: 135px;
+  top: 20%;
+  // left: 90px;
+  left: 12%;
 }
 
 // showcase hook
 .showcase-hook {
-  margin-top: 50px;
-  margin-left: 34px;
+  // margin-top: 50px;
+  margin-top: 14%;
+  width: 45%;
+  // margin-left: 34px;
+  // margin-left: 9%;
   font-style: italic;
-  padding-left: 1px;
-  padding-top: 1px;
+  // padding-left: 1px;
+  // padding-top: 1px;
   letter-spacing: 1.3px;
   font-size: 15px;
   font-family: sans-serif;
   font-weight: 200;
   line-height: 18px;
   position: relative;
+  display: flex;
 }
 
 .showcase-hook-shadow {
@@ -53,8 +59,8 @@
 .showcase-title {
   font-size: 30px;
   color: #fff;
-  margin-left: 34px;
-  margin-top: 25px;
+  // margin-left: 34px;
+  margin-top: 7%;
   position: relative;
   letter-spacing: 1.3px;
   line-height: 1.5em;
@@ -80,15 +86,14 @@
   color: #fff;
   text-shadow: 1px 1px 0px #2b2929;
   line-height: 1.1em;
-
 }
 
 //showcase-episoe
 .showcase-episode-title {
   font-size: 20px;
   color: #fff;
-  margin-left: 34px;
-  margin-top: 75px;
+  // margin-left: 34px;
+  margin-top: 20%;
   position: relative;
   letter-spacing: 1.25px;
   font-family: sans-serif;
@@ -116,8 +121,8 @@
 .showcase-description {
   font-size: 18px;
   color: #fff;
-  margin-left: 34px;
-  margin-top: 102px;
+  // margin-left: 34px;
+  margin-top: 27%;
   position: relative;
   letter-spacing: 1.1px;
   font-family: sans-serif;

@@ -1,31 +1,38 @@
 .nav-bar {
   display: flex;
-  width: 100%;
-  height: 10%;
+  width: 900px;
+  height: 50px;
   justify-content: space-between;
   position: absolute;
   top: 0;
   z-index: 100;
   color: white;
+  margin: 0 auto;
   margin-top: 0px;
+  margin-left: 7%;
+  // opacity: 0.9;
+  // background-color: rgba(255, 0, 0, 0.1);
 }
 
 .nav-bar-right {
   width: 25%;
   display: flex;
-  margin-right: 115px;
+  margin-right: 3%;
   align-items: center;
   justify-content: flex-end;
 }
 .nav-bar-left {
+  width: 65%;
+  margin-left: 5%;
   display: flex;
   align-items: center;
 }
 
 .airwave-logo {
-  padding-top: -5px;
-  padding-left: 120px;
-  padding-right: 8px;
+  // padding-top: -5px;
+  // padding-left: 120px;
+  // padding-right: 8px;
+  margin-right: 4%;
   color: rgb(102, 170, 50);
   font-size: 24px;
   font-family: Futura, "Trebuchet MS", Arial, sans-serif;
