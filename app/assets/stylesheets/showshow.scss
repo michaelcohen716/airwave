@@ -1,7 +1,11 @@
+.showshow-grandparent {
+  max-height: 400px;
+}
+
 .showshow-background {
   filter: brightness(50%);
   background-size: cover;
-  background-image: image-url('groucho3.jpg');
+  // background-image: image-url('groucho3.jpg');
 
   width: 100%;
   // zoom: 130%;
@@ -12,7 +16,7 @@
 .showshow-details {
   position: absolute;
   top: 425px;
-  width: 100%;
+  width: 120%;
   height: 240px;
   background-color: #f5f5f5;
   display: flex;
@@ -20,7 +24,7 @@
 
 .showshow-details-left {
   min-width: 300px;
-  width: 350px;
+  width: 300px;
   height: 100%;
   // border: 1px solid black;
 }
@@ -28,7 +32,7 @@
 .showshow-episodes {
   height: 500px;
   width: 100%;
-  background-color: red;
+  background-color: black;
 }
 
 .showshow-command {
@@ -36,17 +40,17 @@
   font-size: 18px;
   color: #66aa33;
   line-height: 37px;
-  margin-left: 14%;
+  margin-left: 18%;
   margin-top: 4%;
 }
 
 .showshow-queued {
-  height: 140px;
-  width: 200px;
+  height: 130px;
+  width: 220px;
   border: 1px solid green;
-  margin-left: 14%;
-  background-image: image-url('groucho3.jpg');
-  background-size: cover;
+  margin-left: 18%;
+  // background-image: image-url('groucho3.jpg');
+  background-size: contain;
   background-repeat: no-repeat;
 }
 
@@ -56,22 +60,24 @@
   font-size: 14px;
   position: absolute;
   top: 170px;
-  left: 54px;
+  left: 58px;
 }
 
 .showshow-details-right {
   min-width: 700px;
-  width: 75%;
+  // width: 95%;
   height: 100%;
+  margin-top: 1.5%;
 }
 
 .showshow-details-engagement {
-  height: 50px;
+  height: 30px;
   width: 100%;
   // background-color: green;
-  padding-left: 2%;
-  padding-top: 1.3%;
+  padding-left: 0.1%;
+  padding-top: 0.6%;
   font-size: 20px;
+
 }
 
 .rating {
@@ -94,12 +100,61 @@
 }
 
 .text-watchlist {
-  margin-left: 0.3%;
+  margin-left: 0.8%;
   font-family: Helvetica, Arial, Verdana, sans-serif;
-  font-size: 19px;
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+
+  color: #444444;
 }
 
 .fb-watchlist {
   margin-left: 3%;
 
+}
+
+.fb-watchlist-text {
+  color: #444444;
+  font-family: Helvetica, Arial, Verdana, sans-serif;
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+  margin-left: 0.5%;
+
+}
+
+
+.twitter-watchlist {
+  margin-left: 3%;
+}
+
+.twitter-watchlist-text {
+  color: #444444;
+  font-family: Helvetica, Arial, Verdana, sans-serif;
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+  margin-bottom: 0.5%;
+  margin-left: 0.5%;
+}
+
+.showshow-profile {
+  // background-color: red;
+  // border: 1px solid black;
+  margin-left: 0.4%;
+  display: flex;
+  line-height: 1.2em;
+  // border-top: 0.3px solid gray;
+}
+
+.showshow-bold-title {
+  font-weight: bold;
+  font-size: 13px;
+  font-family: Helvetica, Arial, Verdana, sans-serif;
+}
+
+.showshow-profile-description {
+  margin-left: 0.25%;
+  font-size: 13px;
+  font-family: Helvetica, Arial, Verdana, sans-serif;
+  font-weight: 100;
+  width: 60%;
 }

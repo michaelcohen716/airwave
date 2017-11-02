@@ -16,7 +16,7 @@ import SignUpContainer from './session/signup_form_container';
 import HomePageBody from './home_page_body';
 import EpisodeViewContainer from './episode/episode_view_container';
 import EpisodePageBody from './episode_page_body';
-import ShowShow from './show_show/show_show';
+import ShowShowContainer from './show_show/show_show_container';
 
 const App = ({ modal, closeModal }) => {
   return (
@@ -28,7 +28,7 @@ const App = ({ modal, closeModal }) => {
         closeModal={closeModal} />
       <Route exact path="/" component={HomePageBody} />
       <Route path="/episodes/:episodeId" component={EpisodeViewContainer} />
-      <Route path="/series/:seriesId" component={ShowShow} />
+      <Route path="/series/:seriesId" component={ShowShowContainer} />
     </div>
   );
 };

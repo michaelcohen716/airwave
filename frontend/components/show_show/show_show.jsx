@@ -13,8 +13,9 @@ class ShowShow extends React.Component {
 
 
     return (
-      <div>
+      <div className="showshow-grandparent">
         <div className="showshow-background">
+          <img src={this.props.series.imageUrl} />
         </div>
         <section className="showshow-details">
           <div className="showshow-details-left">
@@ -22,10 +23,9 @@ class ShowShow extends React.Component {
               Start Watching
             </div>
             <div className="showshow-queued">
-
+              <img src={this.props.series.imageUrl} />
             </div>
             <span className="showshow-queued-title">
-              Season 1, Episode 1
             </span>
           </div>
           <div className="showshow-details-right">
@@ -36,12 +36,25 @@ class ShowShow extends React.Component {
               <span className="rating fa fa-star-half-o"></span>
               <span className="rating fa fa-star-o"></span>
 
-              <button className="add-to-watchlist fa fa-plus">
+              <button className="add-to-watchlist fa fa-plus"
+                      >
               </button>
               <span className="text-watchlist">watchlist</span>
 
               <span className="fb-watchlist fa fa-facebook-official"></span>
-          </section>
+              <span className="fb-watchlist-text"> facebook</span>
+
+              <span className="twitter-watchlist fa fa-twitter"></span>
+              <span className="twitter-watchlist-text"> twitter</span>
+            </section>
+            <section className="showshow-profile">
+              <div className="showshow-profile-description">
+                <strong className="showshow-bold-title">
+                  {this.props.series.name}:
+                </strong> {' '}
+                {this.props.series.description}
+              </div>
+            </section>
           </div>
         </section>
         <section className="showshow-episodes">

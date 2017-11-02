@@ -1,5 +1,6 @@
 import React from 'react';
 import EpisodeShowWatchlist from './episode_show_watchlist';
+import {Link} from 'react-router-dom';
 
 
 class EpisodeView extends React.Component {
@@ -148,7 +149,7 @@ class EpisodeView extends React.Component {
             </div>
             <div className="video-description-box">
               <span className="episode-airwave-logo">airwave</span>
-              <span className="episode-show-show">{showName}</span>
+              <Link to={`/series/${this.props.episode.series_id}`} className="episode-show-show">{showName}</Link>
               <span className="episode-show-episode">{episodeName}</span>
             </div>
             <section className="video-engagement-bar">

@@ -21,7 +21,7 @@ maurice = User.create!({
 
 groucho = Series.create!({
   name: "You Bet Your Life with Groucho Marx",
-  description: "A classic 1950's quiz show with a humorous twist, 'You Bet Your Life' proved popular with critics and fans alike",
+  description: "A classic 1950's quiz show with a humorous twist, 'You Bet Your Life' proved popular with critics and fans alike. Groucho's indelible sense of humor and flair for the dramatic elevated the quiz show format from a niche fascination to a mainstream sensation.",
   image: "https://s3.us-east-2.amazonaws.com/airwave-seed/groucho_thumb.jpg"
   }
 )
@@ -65,7 +65,7 @@ groucho5 = Episode.create!({
 
 bonanza = Series.create!({
   name: "Bonanza",
-  description: "The Cartwright Family, wealthy but rugged, face down adventures in the Old West",
+  description: "The Cartwright Family, wealthy but rugged, face down adventures in the Old West in one of the most popular shows of the 1960s. While the romanticism of the frontier lifestyle was fading, depictions in popular culture were on the rise",
   image: "https://s3.us-east-2.amazonaws.com/airwave-seed/Bonanza_thumb.jpg"
 })
 
@@ -108,7 +108,7 @@ bonanza5 = Episode.create!({
 
 hillbillies = Series.create!({
   name: "The Beverly Hillbillies",
-  description: "After striking black gold, the Clampetts move to Beverly Hills, finding new friends and embarking on a new way of life",
+  description: "After striking black gold, the Clampetts move to Beverly Hills, finding new friends and embarking on a new way of life. At a time when many Americans were broadening their horizons, Hillbillies' melange of perspectives and tastes drew in millions of viewers every week",
   image: "https://s3.us-east-2.amazonaws.com/airwave-seed/beverly_hillbillies.jpg"
 })
 
@@ -150,7 +150,7 @@ hillbillies5 = Episode.create!({
 # sherlock
 sherlock = Series.create!({
   name: "Sherlock Holmes",
-  description: "Based off Doyle's classic tale, the series follows Holmes and Dr. Watson as they get to the bottom of crime across London",
+  description: "Based off Doyle's classic tale, the series follows Holmes and Dr. Watson as they investigate crimes across London. The duo - never captive to convention - ruffle some feathers along the way, but always get to the bottom of the case",
   image: "https://s3.us-east-2.amazonaws.com/airwave-seed/sherlock_thumb.jpg"
 })
 

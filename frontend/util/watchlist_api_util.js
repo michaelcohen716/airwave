@@ -5,12 +5,6 @@ export const fetchWatchlist = () => (
   })
 );
 
-// export const fetchRandomWatchlist = () => (
-//   $.ajax({
-//     method: 'GET',
-//     url: 'api/random_watchlist'
-//   })
-// );
 
 export const fetchShowEpisode = episodeId => (
   $.ajax({
