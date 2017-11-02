@@ -15,9 +15,6 @@ export const fetchWatchlist = () => dispatch => {
   return WatchlistUtil.fetchWatchlist().then(payload => dispatch(RECEIVE_WATCHLIST(payload)));
 }
 
-// export const fetchRandomWatchlist = () => dispatch => {
-//   return WatchlistUtil.fetchRandomWatchlist().then(payload => dispatch(RECEIVE_WATCHLIST(payload)));
-// }
 
 export const fetchSeries = () => dispatch => {
   return WatchlistUtil.fetchSeries().then(series => dispatch(RECEIVE_SERIES(series)));
@@ -30,10 +27,6 @@ export const receiveSeries = ({series}) => {
     series
   }
 }
-
-
-
-
 
 
 export const addEpisode = episodeId => dispatch => {

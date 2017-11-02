@@ -5,11 +5,19 @@
   left: 12%;
   position: absolute;
   margin-top: 60px;
-  justify-content: space-between;
 }
 
 .episode-watchlist-topbar {
-  
+  height: 20%;
+  width: 100%;
+  border: 1px solid red;
+}
+
+.episode-watchlist-index {
+  justify-content: space-between;
+  height: 80%;
+  width: 100%;
+  display: flex;
 }
 
 .episode-watchlist-item-outer {

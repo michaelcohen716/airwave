@@ -13,7 +13,7 @@
   margin-top: 60px;
   position: absolute;
   box-shadow: 0px 0px 5px #3c3c3c;
-  min-width: 950px;
+  min-width: 850px;
 }
 
 .vsc-initialized {
@@ -246,4 +246,38 @@
 
 .vsc-controller {
   display: none;
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+  width: 65%;
+  margin-left: 2%;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    // width: 600px;
+    height: 5px;
+    background: #ddd;
+    border: none;
+    border-radius: 3px;
+    margin-bottom: 1%;
+
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: goldenrod;
+    margin-top: -4px;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #ccc;
 }

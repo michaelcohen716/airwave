@@ -18,7 +18,7 @@ class EpisodeShowWatchlist extends React.Component {
               EPISODES
             </button>
           </section>
-          <section className="watchlist-index">
+          <section className="episode-watchlist-index">
             <EpisodeShowWatchlistItem />
             <EpisodeShowWatchlistItem />
             <EpisodeShowWatchlistItem />

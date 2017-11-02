@@ -1,6 +1,7 @@
 import React from 'react';
 import EpisodeShowWatchlist from './episode_show_watchlist';
 
+
 class EpisodeView extends React.Component {
   constructor(props){
     super(props);
@@ -78,6 +79,14 @@ class EpisodeView extends React.Component {
     }
   }
 
+  startSeekVideo(){
+    this.setState({paused: true});
+  }
+
+  endSeekVideo(){
+    this.video.seek(time);
+  }
+
   render(){
 
     if(this.props.episode){
@@ -118,7 +127,10 @@ class EpisodeView extends React.Component {
                     onClick={this.forward}>
                   </button>
 
-                  {progressBarStyle}
+                  <input type="range" value="0" min="0" max="0"/>
+
+
+
 
                   <button className="play-bar-volume fa fa-volume-up"
                     onClick={this.changeVolume}>

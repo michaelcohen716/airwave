@@ -1,0 +1,105 @@
+.showshow-background {
+  filter: brightness(50%);
+  background-size: cover;
+  background-image: image-url('groucho3.jpg');
+
+  width: 100%;
+  // zoom: 130%;
+  // margin-left: 10%;
+  height: 500px;
+}
+
+.showshow-details {
+  position: absolute;
+  top: 425px;
+  width: 100%;
+  height: 240px;
+  background-color: #f5f5f5;
+  display: flex;
+}
+
+.showshow-details-left {
+  min-width: 300px;
+  width: 350px;
+  height: 100%;
+  // border: 1px solid black;
+}
+
+.showshow-episodes {
+  height: 500px;
+  width: 100%;
+  background-color: red;
+}
+
+.showshow-command {
+  font-family: Helvetica, Arial, Verdana, sans-serif;
+  font-size: 18px;
+  color: #66aa33;
+  line-height: 37px;
+  margin-left: 14%;
+  margin-top: 4%;
+}
+
+.showshow-queued {
+  height: 140px;
+  width: 200px;
+  border: 1px solid green;
+  margin-left: 14%;
+  background-image: image-url('groucho3.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.showshow-queued-title {
+  color: white;
+  font-family: Helvetica, Arial, Verdana, sans-serif;
+  font-size: 14px;
+  position: absolute;
+  top: 170px;
+  left: 54px;
+}
+
+.showshow-details-right {
+  min-width: 700px;
+  width: 75%;
+  height: 100%;
+}
+
+.showshow-details-engagement {
+  height: 50px;
+  width: 100%;
+  // background-color: green;
+  padding-left: 2%;
+  padding-top: 1.3%;
+  font-size: 20px;
+}
+
+.rating {
+  margin: 0.3%;
+  color: #444444;
+
+}
+
+.add-to-watchlist {
+  margin-left: 3%;
+  font-family: Helvetica, Arial, Verdana, sans-serif;
+  color: white;
+  background-color: #444444;
+  height: 24px;
+  width: 24px;
+  border-radius: 100%;
+  text-align: center;
+  font-size: 17px;
+
+}
+
+.text-watchlist {
+  margin-left: 0.3%;
+  font-family: Helvetica, Arial, Verdana, sans-serif;
+  font-size: 19px;
+}
+
+.fb-watchlist {
+  margin-left: 3%;
+
+}

@@ -10,6 +10,7 @@ const SeriesReducer = (state = {}, action) => {
       return merge({}, state, {[action.series.id]: action.series});
     case RECEIVE_CURRENT_USER:
       return merge({}, state, action.series);
+  
     default:
       return state;
   }
