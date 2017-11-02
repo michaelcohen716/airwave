@@ -1,5 +1,6 @@
+import { connect } from 'react-redux';
+import { createComment } from '../../actions/comment_actions.js';
 import React from 'react';
-// import { withRouter } from 'react-router-dom';
 
 class EpisodeCommentForm extends React.Component {
   constructor(props) {
@@ -46,4 +47,12 @@ class EpisodeCommentForm extends React.Component {
  }
 }
 
-export default EpisodeCommentForm;
+
+const mapDispatchToProps = dispatch => ({
+  createComment: comment => dispatch(createComment(comment))
+});
+
+export default connect(
+  null,
+  mapDispatchToProps
+)(EpisodeCommentForm);

@@ -11,6 +11,10 @@ class Episode < ApplicationRecord
   belongs_to :series,
     primary_key: :id,
     foreign_key: :series_id,
-    class_name: :Series
+    class_name: 'Series'
 
+  has_many :comments,
+    primary_key: :id,
+    foreign_key: :episode_id,
+    class_name: 'Comment'
 end

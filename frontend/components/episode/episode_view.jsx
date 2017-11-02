@@ -28,11 +28,11 @@ class EpisodeView extends React.Component {
   }
 
   rewind() {
-    this.video.currentTime -= 1;
+    this.video.currentTime -= 5;
   }
 
   forward(){
-    this.video.currentTime += 1;
+    this.video.currentTime += 5;
   }
 
   changeVolume(){

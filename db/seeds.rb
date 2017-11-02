@@ -15,7 +15,17 @@ User.delete_all
 maurice = User.create!({
   username: "maurice",
   password: "password"
-  })
+})
+
+frank = User.create!({
+  username: "frankie",
+  password: "password"
+})
+
+jess = User.create!({
+  username: "jessica",
+  password: "password"
+})
 
 # GROUCHO
 
@@ -190,7 +200,6 @@ sherlock5 = Episode.create!({
 })
 
 
-
 WatchlistAdd.create!({
   user_id: maurice.id,
   episode_id: hillbillies2.id
@@ -210,3 +219,21 @@ WatchlistAdd.create!(
   user_id: maurice.id,
   episode_id: sherlock4.id
 )
+
+c1 = Comment.create!({
+  user_id: maurice.id,
+  episode_id: groucho1.id,
+  body: "this is my fave episode obvis"
+})
+
+c2 = Comment.create!({
+  user_id: jess.id,
+  episode_id: groucho1.id,
+  body: "no, this is not good"
+})
+
+c3 = Comment.create!({
+  user_id: frank.id,
+  episode_id: groucho1.id,
+  body: "groucho you crazy bruh"
+})

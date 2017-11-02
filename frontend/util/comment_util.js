@@ -1,7 +1,7 @@
 export const createComment = comment => (
   $.ajax({
     method: 'POST',
-    url: 'api/comments',
+    url: `api/episodes/:episodeId/comments`,
     comment
   })
 );
