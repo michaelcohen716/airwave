@@ -12,7 +12,7 @@ const mapStateToProps = (state, ownProps) => {
   let seriesEpisodes = episodeIds.map(id => {
     return state.entities.episodes[id];
   });
-  
+
   return {
     series: state.entities.series[seriesId],
     episodes: seriesEpisodes

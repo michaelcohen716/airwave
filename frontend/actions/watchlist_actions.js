@@ -30,18 +30,13 @@ export const addEpisode = episodeId => dispatch => {
   return WatchlistUtil.addEpisode(episodeId).then(dispatch(receiveWatchlistAdd(episodeId)));
 };
 
-export const deleteEpisode = watchlistAddId => dispatch => {
-  return WatchlistUtil.deleteEpisode(watchlistAddId).then(dispatch(receiveWatchlistAdd(null)));
-};
-
-
-export const fetchWatchlist = () => dispatch => {
-  // return WatchlistUtil.fetchWatchlist().then(payload => dispatch(RECEIVE_WATCHLIST(payload)));
-}
-
 export const receiveWatchlistAdd = (episodeId) => {
   return {
     type: RECEIVE_WATCHLIST_ADD,
     episodeId
   };
+};
+
+export const deleteEpisode = watchlistAddId => dispatch => {
+  return WatchlistUtil.deleteEpisode(watchlistAddId).then(dispatch(receiveWatchlistAdd(null)));
 };

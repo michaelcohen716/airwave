@@ -6,6 +6,7 @@ import { connect } from 'react-redux';
 class ShowShow extends React.Component {
   constructor(props){
     super(props);
+    // this.addEpisode = this.addEpisode.bind(this);
   }
 
 
@@ -32,6 +33,7 @@ class ShowShow extends React.Component {
                 <img src={this.props.series.imageUrl} />
               </Link>
               <span className="showshow-queued-title">
+
               </span>
             </div>
             <div className="showshow-details-right">

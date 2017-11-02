@@ -29,9 +29,11 @@
 }
 
 .showshow-details-left {
-  min-width: 300px;
-  width: 300px;
-  height: 100%;
+  // min-width: 300px;
+  width: 280px;
+  height: 85.5%;
+  margin-left: 5%;
+  margin-top: 2%;
   // border: 1px solid black;
 }
 
@@ -46,34 +48,46 @@
   font-size: 18px;
   color: #66aa33;
   line-height: 37px;
-  margin-left: 18%;
-  margin-top: 4%;
+  margin-left: 0%;
 }
 
 .showshow-queued {
-  height: 130px;
-  width: 220px;
-  border: 1px solid green;
+  max-height: 130px;
+  max-width: 220px;
+  // border: 1px solid green;
   margin-left: 18%;
   // background-image: image-url('groucho3.jpg');
   background-size: contain;
   background-repeat: no-repeat;
 }
 
+.showshow-queued img {
+  max-height: 130px;
+  min-height: 130px;
+  max-width: 200px;
+  min-width: 200px;
+}
+
 .showshow-queued-title {
   color: white;
   font-family: Helvetica, Arial, Verdana, sans-serif;
-  font-size: 14px;
+  font-size: 12px;
+  word-wrap: normal;
   position: absolute;
+  // color: #66aa33;
+
   top: 170px;
-  left: 58px;
+  left: 68px;
+  width: 100px;
+  height: 10px;
 }
 
 .showshow-details-right {
   min-width: 700px;
   // width: 95%;
-  height: 100%;
-  margin-top: 1.5%;
+  height: 85.5%;
+  margin-top: 2%;
+  margin-left: 1%;
 }
 
 .showshow-details-engagement {
