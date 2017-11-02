@@ -18,14 +18,7 @@ const mapStateToProps = state => {
     return state.entities.episodes[id];
   });
 
-  // let watchlistSeriesIds = watchlistEpisodes.map(epi => {
-  //   return epi.series_id;
-  // });
-  //
-  // console.log(state);
-  // let watchlistSeries = watchlistSeriesIds.map(id => {
-  //   return state.entities.series[id];
-  // });
+
 
   return {
     currentUser: state.session.currentUser,

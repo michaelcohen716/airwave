@@ -11,32 +11,33 @@ export const receiveWatchlist = ({episodes}) => {
   };
 };
 
-export const fetchWatchlist = () => dispatch => {
-  return WatchlistUtil.fetchWatchlist().then(payload => dispatch(RECEIVE_WATCHLIST(payload)));
-}
-
 
 export const fetchSeries = (seriesId) => dispatch => {
-  return WatchlistUtil.fetchSeries(seriesId).then(series => dispatch(RECEIVE_SERIES(series)));
+  return WatchlistUtil.fetchSeries(seriesId).then(payload => dispatch(receiveSeries(payload)));
 }
 
 // singular series
-export const receiveSeries = ({series}) => {
+export const receiveSeries = ({series, episodes}) => {
   return {
     type: RECEIVE_SERIES,
-    series
+    series,
+    episodes
   }
 }
 
 
 export const addEpisode = episodeId => dispatch => {
-  return WatchlistUtil.addEpisode(episodeId).then(dispatch(RECEIVE_WATCHLIST_ADD(episodeId)));
+  return WatchlistUtil.addEpisode(episodeId).then(dispatch(receiveWatchlistAdd(episodeId)));
 };
 
 export const deleteEpisode = watchlistAddId => dispatch => {
-  return WatchlistUtil.deleteEpisode(watchlistAddId).then(dispatch(RECEIVE_WATCHLIST_ADD(null)));
+  return WatchlistUtil.deleteEpisode(watchlistAddId).then(dispatch(receiveWatchlistAdd(null)));
 };
 
+
+export const fetchWatchlist = () => dispatch => {
+  // return WatchlistUtil.fetchWatchlist().then(payload => dispatch(RECEIVE_WATCHLIST(payload)));
+}
 
 export const receiveWatchlistAdd = (episodeId) => {
   return {

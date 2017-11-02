@@ -4,9 +4,18 @@ import { withRouter } from 'react-router-dom';
 import { fetchSeries, addEpisode } from '../../actions/watchlist_actions';
 
 const mapStateToProps = (state, ownProps) => {
+  // debugger
   const seriesId = parseInt(ownProps.match.params.seriesId);
+
+  let episodeIds = state.entities.series[seriesId].episodeIds;
+
+  let seriesEpisodes = episodeIds.map(id => {
+    return state.entities.episodes[id];
+  });
+  
   return {
-    series: state.entities.series[seriesId]
+    series: state.entities.series[seriesId],
+    episodes: seriesEpisodes
   };
 };
 

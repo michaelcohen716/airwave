@@ -1,4 +1,4 @@
 json.extract! series, :id, :name, :description
 json.imageUrl series.image.url
 
-# json.fi
+json.episodeIds series.episode_ids

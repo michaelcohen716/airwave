@@ -1,5 +1,6 @@
 .showshow-grandparent {
-  max-height: 400px;
+  max-height: 670px;
+  overflow: hidden;
 }
 
 .showshow-background {
@@ -8,9 +9,14 @@
   // background-image: image-url('groucho3.jpg');
 
   width: 100%;
-  // zoom: 130%;
+  zoom: 105%;
   // margin-left: 10%;
   height: 500px;
+}
+
+.showshow-background img {
+
+  // max-height: 640px;
 }
 
 .showshow-details {
@@ -30,7 +36,7 @@
 }
 
 .showshow-episodes {
-  height: 500px;
+  // height: 500px;
   width: 100%;
   background-color: black;
 }
@@ -150,6 +156,8 @@
   font-size: 13px;
   font-family: Helvetica, Arial, Verdana, sans-serif;
 }
+
+
 
 .showshow-profile-description {
   margin-left: 0.25%;

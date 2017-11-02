@@ -12,8 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.store = undefined;
   const root = document.getElementById('root');
   if (window.currentUser){
-    store = configureStore({session: {currentUser: window.currentUser.user},
-      entities: {episodes: currentUser.episodes, series: currentUser.series }});
+    store = configureStore({session: {currentUser: window.currentUser.user}, entities: {episodes: currentUser.episodes, series: currentUser.series }});
     delete window.currentUser;
   } else {
     store = configureStore();
