@@ -16,8 +16,8 @@ export const fetchWatchlist = () => dispatch => {
 }
 
 
-export const fetchSeries = () => dispatch => {
-  return WatchlistUtil.fetchSeries().then(series => dispatch(RECEIVE_SERIES(series)));
+export const fetchSeries = (seriesId) => dispatch => {
+  return WatchlistUtil.fetchSeries(seriesId).then(series => dispatch(RECEIVE_SERIES(series)));
 }
 
 // singular series
