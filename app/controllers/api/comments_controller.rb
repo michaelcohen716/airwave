@@ -8,7 +8,7 @@ class Api::CommentsController < ApplicationController
     @comment.episode_id = params[:episode_id]
     @comment.user_id = current_user.id
     if @comment.save
-      render "api/episodes/comments"
+      render "api/comments/comment"
     else
       render json: @comment.errors.full_messages, status: 422
     end

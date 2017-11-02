@@ -3,6 +3,7 @@ import merge from 'lodash/merge';
 import { RECEIVE_WATCHLIST, RECEIVE_WATCHLIST_ADD, RECEIVE_SHOW_EPISODE} from '../actions/episode_actions';
 import { RECEIVE_CURRENT_USER } from '../actions/session_actions';
 import { RECEIVE_SERIES } from '../actions/watchlist_actions';
+import { RECEIVE_COMMENT } from '../actions/comment_actions':
 
 const EpisodesReducer = (state = {}, action) => {
   Object.freeze(state);
@@ -17,6 +18,12 @@ const EpisodesReducer = (state = {}, action) => {
     case RECEIVE_CURRENT_USER:
     case RECEIVE_SERIES:
       return merge({}, state, action.episodes );
+
+    case RECEIVE_COMMENT:
+      const newState = merge({}, state);
+      const episode = newState[action.comment.episode_id]
+      episode.commentIds.push(action.comment.id);
+      return newState;
     default:
       return state;
   }
