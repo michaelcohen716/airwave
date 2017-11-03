@@ -39,3 +39,16 @@ You love Sherlock Holmes?! That's good. Why don't you leave a comment and expres
 Okay, I'm glad you're enthusiastic, but it's just a TV show.
 
 ![comment1](app/assets/images/comment1.png "comment1")
+
+Cool, it's been fun. Time to logout.
+
+![logout](app/assets/images/logout.png "logout")
+
+
+I had fun building Airwave, but there are a few features I'd still like to add.
+
+* Search by title, series or genre
+* Rendering a functional progress bar on my episode view page
+* Implementing a rotating carousel with different episode features on my home page (it's currently static)
+
+#cc

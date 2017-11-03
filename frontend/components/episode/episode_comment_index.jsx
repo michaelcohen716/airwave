@@ -23,7 +23,7 @@ class EpisodeCommentIndex extends React.Component {
       return(
         <div className="comment-holder">
           <EpisodeCommentForm />
-          <div className="commens-index-holder">
+          <div className="comments-index-holder">
             {comments}
           </div>
         </div>
