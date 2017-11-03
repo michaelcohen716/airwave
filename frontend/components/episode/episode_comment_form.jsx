@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import { createComment } from '../../actions/comment_actions.js';
 import React from 'react';
+import {withRouter} from 'react-router-dom';
 
 class EpisodeCommentForm extends React.Component {
   constructor(props) {
@@ -13,33 +14,35 @@ class EpisodeCommentForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    console.log(this.props);
     const episodeId = parseInt(this.props.match.params.episodeId);
     const comment = Object.assign({}, this.state, {
       episode_id: episodeId
     });
-    this.props.createComment({comment});
+    this.props.createComment({comment}).then( () => this.setState({body:' '}));
+
   }
 
-  update(body) {
-    return e => this.setState({ [body]: e.currentTarget.value });
+  update(field) {
+    return e => this.setState({ [field]: e.target.value });
   }
 
   render() {
     return (
-      <div className="comment-parent">
+      <div className="comment-form holder">
         <form onSubmit={this.handleSubmit}>
 
-          <label>Comment</label>
+          <label className="comment-head">Comment</label>
           <br/>
 
-          <textarea
-            cols="30"
-            rows="10"
+          <textarea className="comment-text-area"
+            cols="93"
+            rows="4"
             value={this.state.body}
             onChange={this.update("body")}
           />
           <br/>
-          <input type="submit" />
+          <input className="comment-submit" type="submit" />
         </form>
 
       </div>
@@ -52,7 +55,7 @@ const mapDispatchToProps = dispatch => ({
   createComment: comment => dispatch(createComment(comment))
 });
 
-export default connect(
+export default withRouter(connect(
   null,
   mapDispatchToProps
-)(EpisodeCommentForm);
+)(EpisodeCommentForm));

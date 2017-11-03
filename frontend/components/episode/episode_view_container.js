@@ -11,7 +11,11 @@ const mapStateToProps = (state, ownProps) => {
     comments = state.entities.episodes[episodeId].commentIds.map(id => {
       return state.entities.comments[id];
     });
-  }else {
+    if (comments.indexOf(undefined) > -1) {
+      comments = [];
+    }
+  }
+  else {
     comments =[];
   }
   return {

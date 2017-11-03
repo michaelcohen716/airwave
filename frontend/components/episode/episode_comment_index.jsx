@@ -15,14 +15,17 @@ class EpisodeCommentIndex extends React.Component {
           <EpisodeCommentItem
             body={comment.body}
             key={comment.id}
+            username={comment.username}
           />
         )
       );
 
       return(
-        <div>
+        <div className="comment-holder">
           <EpisodeCommentForm />
-          {comments}
+          <div className="commens-index-holder">
+            {comments}
+          </div>
         </div>
       );
     }else{
