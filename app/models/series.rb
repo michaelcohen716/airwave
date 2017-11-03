@@ -1,6 +1,8 @@
 class Series < ApplicationRecord
   has_attached_file :image, default_url: "groucho_movie.jpg"
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
+  has_attached_file :image_thumb, default_url: "groucho_movie.jpg"
+  validates_attachment_content_type :image_thumb, content_type: /\Aimage\/.*\Z/
   validates :name, :description, presence: true
   validates :name, uniqueness: true
 

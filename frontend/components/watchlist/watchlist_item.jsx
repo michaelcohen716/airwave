@@ -11,7 +11,7 @@ class WatchlistItem extends React.Component {
   }
 
   render(){
-
+    console.log(this.props.series);
     const randUnwatched = Math.floor(Math.random() * 30);
     // debugger
     return (

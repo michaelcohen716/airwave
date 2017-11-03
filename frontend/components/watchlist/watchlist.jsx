@@ -17,14 +17,20 @@ class Watchlist extends React.Component {
         );
       });
 
-      const currentUserOrNot = this.props.currentUser ? this.props.currentUser.username : "GUEST";
+      if (this.props.currentUser){
+        const currentUserOrNot =(
+          <button className="watchlist-topbar-title">
+            {currentUser.username}{`'`}s Watchlist
+          </button>
+        );
+    }else {
+      const currentUserOrNot = "";
+    }
 
       return (
         <div className="watchlist-parent">
           <section className="watchlist-topbar">
-            <button className="watchlist-topbar-title">
-              {currentUserOrNot}{`'`}s Watchlist
-            </button>
+            {currentUserOrNot}
           </section>
           <section className="watchlist-index">
             {watchlistItems}
