@@ -11,7 +11,7 @@ class Watchlist extends React.Component {
 
   render(){
     let currentUserOrNot="";
-    if (this.props.currentUser.username){
+    if (this.props.episodes.length > 0){
       const watchlistItems = this.props.episodes.map((e) => {
         return (
           <WatchlistItem episode={e} key={e.id}/>
