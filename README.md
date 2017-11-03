@@ -50,5 +50,3 @@ I had fun building Airwave, but there are a few features I'd still like to add.
 * Search by title, series or genre
 * Rendering a functional progress bar on my episode view page
 * Implementing a rotating carousel with different episode features on my home page (it's currently static)
-
-#cc
