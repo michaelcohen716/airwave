@@ -65,12 +65,12 @@ groucho4 = Episode.create!({
   video: "https://s3.us-east-2.amazonaws.com/airwave-seed/You_Bet_Your_Life_House.ogv"
 })
 
-groucho5 = Episode.create!({
-  title: "You Bet Your Life with Groucho Marx: Voice",
-  description: "Grouch tests each contestant's voice ... and sense of humor",
-  series_id: groucho.id,
-  video: "https://s3.us-east-2.amazonaws.com/airwave-seed/You_Bet_Your_Life_Voice.ogv"
-})
+# groucho5 = Episode.create!({
+#   title: "You Bet Your Life with Groucho Marx: Voice",
+#   description: "Grouch tests each contestant's voice ... and sense of humor",
+#   series_id: groucho.id,
+#   video: "https://s3.us-east-2.amazonaws.com/airwave-seed/You_Bet_Your_Life_Voice.ogv"
+# })
 
 # bonanza
 
@@ -224,6 +224,27 @@ WatchlistAdd.create!(
   episode_id: sherlock4.id
 )
 
+
+WatchlistAdd.create!({
+  user_id: frank.id,
+  episode_id: hillbillies2.id
+})
+
+WatchlistAdd.create!(
+  user_id: frank.id,
+  episode_id: bonanza5.id
+)
+
+WatchlistAdd.create!(
+  user_id: frank.id,
+  episode_id: groucho3.id
+)
+
+WatchlistAdd.create!(
+  user_id: frank.id,
+  episode_id: sherlock4.id
+)
+
 c1 = Comment.create!({
   user_id: maurice.id,
   episode_id: groucho1.id,
@@ -240,4 +261,10 @@ c3 = Comment.create!({
   user_id: frank.id,
   episode_id: groucho1.id,
   body: "groucho you crazy bruh"
+})
+
+c4 = Comment.create!({
+  user_id: maurice.id,
+  episode_id: sherlock2.id,
+  body: "Personally, I prefer the BBC's late '60s interpretation of Holmes'"
 })

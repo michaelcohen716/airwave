@@ -10,39 +10,38 @@ class Watchlist extends React.Component {
   }
 
   render(){
-    if (this.props.episodes ){
+    let currentUserOrNot="";
+    if (this.props.currentUser.username){
       const watchlistItems = this.props.episodes.map((e) => {
         return (
           <WatchlistItem episode={e} key={e.id}/>
         );
       });
 
-      if (this.props.currentUser){
-        const currentUserOrNot =(
+
+      currentUserOrNot = (
+        <section className="watchlist-topbar">
           <button className="watchlist-topbar-title">
-            {currentUser.username}{`'`}s Watchlist
+            {this.props.currentUser.username}{`'`}s Watchlist
           </button>
-        );
-    }else {
-      const currentUserOrNot = "";
-    }
+
+        </section>
+      );
 
       return (
         <div className="watchlist-parent">
-          <section className="watchlist-topbar">
-            {currentUserOrNot}
-          </section>
+          {currentUserOrNot}
           <section className="watchlist-index">
             {watchlistItems}
           </section>
         </div>
       );
-    }else {
-      return <div></div>;
     }
 
+    else {
+      return <div></div>;
+    }
   }
 }
-
 
 export default Watchlist;

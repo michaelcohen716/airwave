@@ -172,6 +172,9 @@ class EpisodeView extends React.Component {
 
             </section>
           </div>
+          <EpisodeCommentIndex
+            comments={this.props.comments}
+            />
         </div>
 
       );
@@ -182,9 +185,6 @@ class EpisodeView extends React.Component {
 
 
 }
-// <EpisodeCommentIndex
-//   comments={this.props.comments}
-//   />
 
 
 export default EpisodeView;
