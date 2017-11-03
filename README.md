@@ -1,6 +1,6 @@
 # README
 
-** #Airwave**
+# **Airwave**
 
 [airwave](http://airwavetv.herokuapp.com/#/)
 
