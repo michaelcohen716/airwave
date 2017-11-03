@@ -22,3 +22,10 @@ The episode_id is drawn from an episodes table with title, description and serie
 Airwave is a video platform, so let's watch a video.
 
 ![episode_view](app/assets/images/episode_view.png "episode")
+
+Hmmm...Bonanza seems like a pretty cool show. You'd like to know more?
+Let's press on the show title.
+
+![show_show](app/assets/images/show_show.png "showshow")
+
+If you'd like to start bingeing Bonanza from the beginning, we've queued up the first episode in our database.
