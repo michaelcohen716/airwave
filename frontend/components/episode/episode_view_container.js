@@ -5,9 +5,15 @@ import { withRouter } from 'react-router-dom';
 
 const mapStateToProps = (state, ownProps) => {
   const episodeId = parseInt(ownProps.match.params.episodeId);
-  const comments = state.entitie.episodes[episodeId].commentIds.map(comment => {
-    return state.entities.comments[comment.id];
-  });
+  
+  let comments;
+  if(state.entities.episodes[episodeId]){
+    comments = state.entities.episodes[episodeId].commentIds.map(comment => {
+      return state.entities.comments[comment.id];
+    });
+  }else {
+    comments =[];
+  }
   return {
     episode: state.entities.episodes[episodeId],
     comments

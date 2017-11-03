@@ -1,4 +1,4 @@
-import { RECEIVE_COMMENT } from '../../actions/comment_actions';
+import { RECEIVE_COMMENT } from '../actions/comment_actions';
 import { RECEIVE_SHOW_EPISODE } from '../actions/episode_actions';
 import merge from 'lodash/merge';
 

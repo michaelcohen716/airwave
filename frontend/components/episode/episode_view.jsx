@@ -1,8 +1,8 @@
 import React from 'react';
-import EpisodeShowWatchlist from './episode_show_watchlist';
+// import EpisodeShowWatchlist from './episode_show_watchlist';
 import {Link} from 'react-router-dom';
 import EpisodeCommentForm from './episode_comment_form';
-
+import EpisodeCommentIndex from './episode_comment_index';
 
 class EpisodeView extends React.Component {
   constructor(props){
@@ -44,7 +44,7 @@ class EpisodeView extends React.Component {
   }
 
   renderFullscreen(){
-    this.video.requestFullscreen();
+    // this.video.requestFullscreen();
 
   }
 
@@ -172,7 +172,6 @@ class EpisodeView extends React.Component {
 
             </section>
           </div>
-          <EpisodeCommentForm/>
         </div>
 
       );
@@ -183,6 +182,9 @@ class EpisodeView extends React.Component {
 
 
 }
+// <EpisodeCommentIndex
+//   comments={this.props.comments}
+//   />
 
 
 export default EpisodeView;
