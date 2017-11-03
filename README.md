@@ -1,4 +1,4 @@
 # README
 
 Airwave
-<img src="modal.png" width="100" height="100"/>
+![modal](app/assets/images/modal.png "modal")
