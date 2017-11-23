@@ -1,5 +1,6 @@
 import React from 'react';
 import {withRouter} from 'react-router-dom';
+import Link from 'react-router';
 
 class SessionForm extends React.Component {
   constructor(props){
@@ -25,7 +26,6 @@ class SessionForm extends React.Component {
   }
 
   renderErrors(){
-    // debugger
     return (
       <ul>
         {this.props.errors.map((error, i) => (
@@ -47,13 +47,10 @@ class SessionForm extends React.Component {
 
   demoLogin(e){
     const demoUser = {username: "maurice", password: "password"};
-    // this.setState({username: "maurice", password: "password"});
     this.props.submitAction(demoUser).then(()=> this.props.history.push('/')).then(this.props.closeModal);
   }
 
   render(){
-
-
     const submitText = this.props.formType === "login" ? "Log in" : "Sign up";
     const actionText = this.props.formType === "login" ? "Log in to Airwave" : "Sign up for Airwave";
     return (
@@ -63,10 +60,10 @@ class SessionForm extends React.Component {
               <div className="session-column-fb">
                 <div className="fb-login">
                   <div className="fb-login-head">
-                    <span className="fb-login-instantly">Log in instantly with Facebook</span>
+                    <a href="https://facebook.com" className="fb-login-instantly">Log in instantly with Facebook</a>
                   </div>
                   <span className="fb-login-recommended">(Recommended)</span>
-                  <button className="fb-login-button"></button>
+                  <a href="https://facebook.com"><div className="fb-login-button"></div></a>
                   <ul className="fb-login-attributes">
                     <li>Share what you love with your friends</li>
                     <li>See the videos your friends want to share</li>
