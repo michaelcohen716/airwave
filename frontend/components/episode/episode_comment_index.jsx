@@ -8,7 +8,6 @@ class EpisodeCommentIndex extends React.Component {
     super(props);
   }
   render(){
-    // let comments = [];
     if(this.props.comments){
       console.log(this.props.comments);
       let comments = this.props.comments.map(comment => (

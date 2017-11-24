@@ -8,28 +8,29 @@ class NavBarDropdownTV extends React.Component {
         <button className="dropdown-button">
           TV
         </button>
-        <div className="dropdown-content">
-          <div className="dropdown-content-holder">
-            <button className="dropdown-content-link">
-              Popular
-            </button>
-            <button className="dropdown-content-link">
-              Recently Added
-            </button>
-            <button className="dropdown-content-link">
-              Genres
-            </button>
-            <button className="dropdown-content-link">
-              Staff Picks
-            </button>
-            <button className="dropdown-content-link">
-              Networks
-            </button>
-          </div>
-        </div>
       </span>
     );
   }
 }
 
 export default NavBarDropdownTV;
+
+// <div className="dropdown-content hidden">
+//   <div className="dropdown-content-holder hidden">
+//     <button className="dropdown-content-link">
+//       Popular
+//     </button>
+//     <button className="dropdown-content-link">
+//       Recently Added
+//     </button>
+//     <button className="dropdown-content-link">
+//       Genres
+//     </button>
+//     <button className="dropdown-content-link">
+//       Staff Picks
+//     </button>
+//     <button className="dropdown-content-link">
+//       Networks
+//     </button>
+//   </div>
+// </div>

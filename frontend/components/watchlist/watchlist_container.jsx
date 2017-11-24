@@ -3,7 +3,6 @@ import Watchlist from './watchlist';
 import { fetchWatchlist, addEpisode, deleteEpisode } from '../../actions/watchlist_actions';
 
 const mapStateToProps = state => {
-  // console.log(state);
   let watchlistIds;
 
   if (state.session.currentUser) {

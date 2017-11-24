@@ -97,9 +97,9 @@ class SessionForm extends React.Component {
                       className="session-box" />
                   </section>
 
-                  <span className="forgot-password">
+                  <a href="https://hulu.com" className="forgot-password">
                     Forgot your password/email?
-                  </span>
+                  </a>
                   <input type="submit" value={submitText}
                                        className="login-button"/>
                   <button  value="DemoLogIn"

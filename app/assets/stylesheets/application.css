@@ -22,9 +22,9 @@
   flex-wrap: wrap;
 }
 
-/*html {
-  min-width: 1200px;
-}*/
+.hidden {
+  display: hidden;
+}
 
 .home-page-body {
   background-color: #f5f5f5;

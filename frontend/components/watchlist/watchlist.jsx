@@ -1,8 +1,6 @@
 import React from 'react';
 import WatchlistItem from './watchlist_item';
 
-
-
 class Watchlist extends React.Component {
 
   constructor(props){
