@@ -22,7 +22,6 @@ document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(<Root store={store} />, root);
 
   const current_user = document.getElementById("bootstrap-current-user");
-  //test
   window.getState = store.getState;
   window.dispatch = store.dispatch;
   window.fetchRandomWatchlist = fetchRandomWatchlist;

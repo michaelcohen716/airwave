@@ -3,12 +3,14 @@ import session from './session_reducer';
 import entities from './entities_reducer';
 import errors from './errors_reducer';
 import ui from './ui_reducer';
+import search from './search_reducer';
 
 const RootReducer = combineReducers({
   session,
   entities,
   errors,
-  ui
+  ui,
+  search
 });
 
 export default RootReducer;

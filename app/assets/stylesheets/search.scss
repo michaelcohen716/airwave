@@ -1,0 +1,32 @@
+.search-results-parent {
+  width: 100%;
+  height: 100%;
+  font-family: Helvetica, Arial, Verdana, sans-serif;
+  color: #444444;
+  background-color: white;
+  position: absolute;
+  top: 50px;
+}
+
+.search-banner {
+  height: 60px;
+  font-size: 30px;
+  width: 100%;
+  background-color: white;
+  padding-left: 11%;
+  padding-right: 9%;
+  margin-top: 10px;
+}
+
+.search-index-container {
+
+}
+
+.search-item-outer {
+  border: 1px solid black;
+  margin-left: 11%;
+  width: 80%;
+  min-width: 900px;
+  height: 150px;
+  margin-top: 10px;
+}

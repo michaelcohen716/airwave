@@ -1,5 +1,6 @@
 class Episode < ApplicationRecord
-  has_attached_file :video, default_url: "ctvc_BAYER.ogv"
+  has_attached_file :video, default_url: "ctvc_BAYER.ogv",
+      :bucket => ENV['s3_bucket'], :storage => :s3
   validates_attachment_content_type :video, content_type: /\Avideo\/.*\Z/
   validates :title, :description, presence: true, uniqueness: true
 

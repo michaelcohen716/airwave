@@ -15,8 +15,8 @@ import LogInContainer from './session/login_form_container';
 import SignUpContainer from './session/signup_form_container';
 import HomePageBody from './home_page_body';
 import EpisodeViewContainer from './episode/episode_view_container';
-// import EpisodePageBody from './episode_page_body';
 import ShowShowContainer from './show_show/show_show_container';
+import SearchPage from './search_page';
 
 const App = ({ modal, closeModal }) => {
   return (
@@ -29,10 +29,10 @@ const App = ({ modal, closeModal }) => {
       <Route exact path="/" component={HomePageBody} />
       <Route path="/episodes/:episodeId" component={EpisodeViewContainer} />
       <Route path="/series/:seriesId" component={ShowShowContainer} />
+      <Route path="/search" component={SearchPage} />
     </div>
   );
 };
-// <Route path="/episodes/:episodeId" component={EpisodePageBody} />
 
 const mapStateToProps = ({ ui: {modal }}) => {
   return {
