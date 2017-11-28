@@ -9,7 +9,6 @@ class EpisodeCommentIndex extends React.Component {
   }
   render(){
     if(this.props.comments){
-      console.log(this.props.comments);
       let comments = this.props.comments.map(comment => (
           <EpisodeCommentItem
             body={comment.body}

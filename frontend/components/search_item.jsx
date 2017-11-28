@@ -11,11 +11,21 @@ class SearchItem extends React.Component {
   }
 
   render(){
-
+  
     return (
       <div className="search-item-outer">
-        <section className="search-item-description watchlist-item-thumb">
+        <section className="search-item-description">
+          <div className="search-thumb">
+          </div>
+          <div className="search-series">
+            Name of Series
+          </div>
+          <div className="search-episode">
+            Episode Name a Little Longer
+          </div>
+          <div className="search-description">
 
+          </div>
         </section>
       </div>
     );

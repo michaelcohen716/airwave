@@ -41,15 +41,8 @@ const mapDispatchToProps = (dispatch, ownProps) => {
   };
 };
 
-const mapStateToProps = (state, ownProps) => {
-  return {
-    results: state.results
-    //is this slice of state I want?
-  };
-};
-
 
 export default withRouter(connect(
-  mapStateToProps,
+  null,
   mapDispatchToProps
 )(SearchBar));

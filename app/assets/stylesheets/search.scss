@@ -22,6 +22,11 @@
 
 }
 
+.search-item-description {
+  display: flex;
+  flex-direction: row;
+}
+
 .search-item-outer {
   border: 1px solid black;
   margin-left: 11%;
@@ -29,4 +34,36 @@
   min-width: 900px;
   height: 150px;
   margin-top: 10px;
+}
+
+.search-thumb {
+  width: 140px;
+  height: 140px;
+  margin-left: 5px;
+  margin-top: 5px;
+  border: 1px solid red;
+}
+
+.search-series {
+  width: 250px;
+  height: 25px;
+  border: 1px solid green;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+.search-episode {
+  margin-left: 10px;
+  width: 350px;
+  height: 25px;
+  border: 1px solid red;
+  margin-top: 5px;
+}
+
+.search-description {
+  border: 1px solid black;
+  width: 600px;
+  height: 80px;
+  margin-left: -613px;
+  margin-top: 40px;
 }

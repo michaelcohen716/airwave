@@ -1,7 +1,7 @@
-export const search = (input) => {
+export const search = (results) => {
   return $.ajax ({
     method: "get",
     url: '/api/search',
-    data: { input }
+    data: { results }
   });
 };
