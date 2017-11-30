@@ -1,11 +1,12 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 
 class NavBarDropdownTV extends React.Component {
 
   render(){
     return (
       <span className="banner-dropdown">
-        <button className="dropdown-button">
+        <button className="dropdown-button" onClick={() => history.push('/episodes')}>
           TV
         </button>
       </span>
@@ -13,7 +14,7 @@ class NavBarDropdownTV extends React.Component {
   }
 }
 
-export default NavBarDropdownTV;
+export default withRouter(NavBarDropdownTV);
 
 // <div className="dropdown-content hidden">
 //   <div className="dropdown-content-holder hidden">

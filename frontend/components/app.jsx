@@ -17,6 +17,7 @@ import HomePageBody from './home_page_body';
 import EpisodeViewContainer from './episode/episode_view_container';
 import ShowShowContainer from './show_show/show_show_container';
 import SearchPage from './search_page';
+import EpisodeIndex from './episode/episode_index';
 
 const App = ({ modal, closeModal }) => {
   return (
@@ -30,6 +31,7 @@ const App = ({ modal, closeModal }) => {
       <Route path="/episodes/:episodeId" component={EpisodeViewContainer} />
       <Route path="/series/:seriesId" component={ShowShowContainer} />
       <Route path="/search" component={SearchPage} />
+      <Route exact path="/episodes" component={EpisodeIndex} />
     </div>
   );
 };

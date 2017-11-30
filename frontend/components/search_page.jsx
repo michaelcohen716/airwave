@@ -7,41 +7,37 @@ import { withRouter} from 'react-router-dom';
 class SearchPage extends React.Component {
   constructor(props){
     super(props);
-
   }
 
   render(){
     if(this.props.results){
       let results = this.props.results.map(result => (
-        <SearchItem
-          series={result.series}
-          title={result.title}
-          description={result.description}
-          thumb={result.thumb}
-        />
+          <SearchItem
+            key={result.id}
+            title={result.title}
+            description={result.description}
+            thumb={result.thumb}
+            id={result.id}
+            />
       ));
       return (
         <div className="search-results-parent">
           <div className="search-banner">
-            Search Results for "search input"
+            Search Results
           </div>
           <section className="search-index-container">
-            <SearchItem />
-              <SearchItem />
-              </section>
-            </div>
+            {results}
+            </section>
+          </div>
           );
 
     } else {
       return (
         <div className="search-results-parent">
           <div className="search-banner">
-            Search Results for "search input"
+            Sorry, no results matching that search
           </div>
-          <section className="search-index-container">
-            <SearchItem />
-            <SearchItem />
-          </section>    
+          
         </div>
       );
     }
@@ -49,8 +45,13 @@ class SearchPage extends React.Component {
 }
 
 const mapStateToProps = (state, ownProps) => {
+  let results = [];
+
+  if(state.search){
+    results = state.search.results;
+  }
   return {
-    results: state.search.results
+    results: results
   };
 };
 

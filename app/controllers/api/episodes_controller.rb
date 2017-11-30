@@ -4,11 +4,11 @@ class Api::EpisodesController < ApplicationController
   end
 
   def index
-    @recipes = Recipe.all
+    @episodes = Episode.all
     if params[:search]
-      @recipes = Recipe.search(params[:search]).order("title ASC")
+      @episodes = Episode.search(params[:search]).order("title ASC")
     else
-      @recipes = Recipe.all.order("title ASC")
+      @episodes = Episode.all.order("title ASC")
     end
   end
 end

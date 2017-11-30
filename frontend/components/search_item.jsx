@@ -8,24 +8,30 @@ class SearchItem extends React.Component {
     this.state = {
       inWatchlist: false
     };
+    this.thumb = this.props.thumb;
+    this.title = this.props.title;
+    this.description = this.props.description;
+    this.id = this.props.id;
   }
 
   render(){
-  
+
     return (
       <div className="search-item-outer">
         <section className="search-item-description">
-          <div className="search-thumb">
+          <div className="search-thumb-holder">
+            <img className="search-thumb" src={this.thumb} id="search-thumb"/>
           </div>
-          <div className="search-series">
-            Name of Series
-          </div>
-          <div className="search-episode">
-            Episode Name a Little Longer
-          </div>
-          <div className="search-description">
 
-          </div>
+          <section className="search-side-holder">
+            <Link to={`/episodes/${this.props.id}`} className="search-episode">
+              {this.title}
+            </Link>
+            <div className="search-description">
+              {this.description}
+            </div>
+          </section>
+
         </section>
       </div>
     );

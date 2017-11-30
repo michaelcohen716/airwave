@@ -32,7 +32,12 @@ export const NavBar = ({currentUser, openModal, logout, history}) => {
           </button>
 
           <ul>
-            <NavBarDropdownTV />
+            <span className="banner-dropdown">
+              <button className="dropdown-button" onClick={() => history.push('/episodes')}>
+                TV
+              </button>
+            </span>
+            
             <NavBarDropdownMovies />
 
             <li className="banner-dropdown">

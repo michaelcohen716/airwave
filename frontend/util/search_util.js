@@ -5,3 +5,7 @@ export const search = (query) => {
     data: {query}
   });
 };
+
+export const fetchEpisodes = () => {
+  return $.ajax('api/episodes');
+};
