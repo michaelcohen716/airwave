@@ -23,8 +23,6 @@ const EpisodesReducer = (state = {}, action) => {
       const episode = newState[action.comment.episode_id];
       episode.commentIds.push(action.comment.id);
       return newState;
-    case RECEIVE_EPISODES:
-      return merge({}, action.episodes);
     default:
       return state;
   }

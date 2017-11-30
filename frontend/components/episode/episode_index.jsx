@@ -16,7 +16,6 @@ class EpisodeIndex extends React.Component {
 
   render(){
     if(this.props.episodes){
-      console.log(this.props.episodes);
       let episodes = this.props.episodes.map(episode => {
         return (
           <SearchItem key={episode.id}
