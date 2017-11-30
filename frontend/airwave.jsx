@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import configureStore from './store/store';
 import Root from './components/root';
 import {signup, login, logout} from './actions/session_actions';
-const Modal = require('react-modal');
+import Modal from 'react-modal';
 import videojs from 'video.js';
 import { fetchRandomWatchlist } from './actions/watchlist_actions';
 

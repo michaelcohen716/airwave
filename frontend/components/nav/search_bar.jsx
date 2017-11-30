@@ -1,6 +1,6 @@
 import React from 'react';
 import { withRouter} from 'react-router-dom';
-import { search } from '../../actions/search_actions';
+import { fetchSearchResults } from '../../actions/search_actions';
 import { connect } from 'react-redux';
 
 class SearchBar extends React.Component {
@@ -11,7 +11,11 @@ class SearchBar extends React.Component {
   }
 
   search(){
-    this.props.history.push(`/search?queryString=${this.state.input}`);
+    this.props.fetchSearchResults(this.state.input).then(() => this.props.history.push('/search'));
+  }
+
+  searchTitles(titles){
+
   }
 
   update(field){
@@ -37,7 +41,7 @@ class SearchBar extends React.Component {
 
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
-    search: (input) => dispatch(search(input))
+    fetchSearchResults: (input) => dispatch(fetchSearchResults(input))
   };
 };
 

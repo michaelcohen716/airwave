@@ -1,5 +1,4 @@
 import React from 'react';
-// import EpisodeShowWatchlist from './episode_show_watchlist';
 import {Link} from 'react-router-dom';
 import EpisodeCommentForm from './episode_comment_form';
 import EpisodeCommentIndex from './episode_comment_index';
