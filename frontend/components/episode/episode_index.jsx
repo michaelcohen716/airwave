@@ -22,13 +22,19 @@ class EpisodeIndex extends React.Component {
           <SearchItem key={episode.id}
             title={episode.title}
             description={episode.description}
+            thumb={episode.thumb}
             />
           );
 
         });
         return (
-          <div className="episode-index">
-            {episodes}
+          <div className="search-results-parent">
+            <div className="search-banner">
+              All Episodes
+            </div>
+            <section className="search-index-container">
+              {episodes}
+            </section>
           </div>
         );
     } else {
@@ -40,7 +46,7 @@ class EpisodeIndex extends React.Component {
 
 const mapStateToProps = (state) => {
   return {
-    episodes: state.search.episodes
+    episodes: state.search.results
   };
 };
 

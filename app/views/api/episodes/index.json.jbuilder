@@ -1,7 +1,6 @@
-json.episodes do
-  @episodes.each do |episode|
-    json.set! episode.id do
-      json.partial! 'api/episodes/episode.json.jbuilder', episode: episode
-    end
+json.results do
+  json.array! @episodes do |episode|
+    json.partial! 'api/episodes/episode.json.jbuilder', episode: episode
+    episode.series.image_thumb
   end
 end

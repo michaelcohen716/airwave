@@ -27,9 +27,9 @@ class SearchPage extends React.Component {
           </div>
           <section className="search-index-container">
             {results}
-            </section>
-          </div>
-          );
+          </section>
+        </div>
+        );
 
     } else {
       return (
@@ -37,7 +37,7 @@ class SearchPage extends React.Component {
           <div className="search-banner">
             Sorry, no results matching that search
           </div>
-          
+
         </div>
       );
     }
