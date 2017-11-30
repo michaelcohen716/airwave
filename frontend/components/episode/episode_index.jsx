@@ -23,6 +23,7 @@ class EpisodeIndex extends React.Component {
             title={episode.title}
             description={episode.description}
             thumb={episode.thumb}
+            id={episode.id}
             />
           );
 
