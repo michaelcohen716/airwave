@@ -30,7 +30,7 @@ class EpisodeIndex extends React.Component {
         return (
           <div className="search-results-parent">
             <div className="search-banner">
-              All Episodes
+              All Episodes and Movies
             </div>
             <section className="search-index-container">
               {episodes}

@@ -19,9 +19,9 @@ class SearchItem extends React.Component {
     return (
       <div className="search-item-outer">
         <section className="search-item-description">
-          <div className="search-thumb-holder">
+          <Link to={`/episodes/${this.props.id}`} className="search-thumb-holder">
             <img className="search-thumb" src={this.thumb} id="search-thumb"/>
-          </div>
+          </Link>
 
           <section className="search-side-holder">
             <Link to={`/episodes/${this.props.id}`} className="search-episode">
