@@ -7,7 +7,7 @@
 }
 
 .progress-bar {
-  width: 400px;
+  width: 600px;
   height: 32px;
 }
 
@@ -88,6 +88,10 @@
   background: white;
 }
 
+.progress-bar-holder {
+  width: 100%;
+}
+
 #progress-bar-render {
   color: green;
   height: 2px;
@@ -97,6 +101,7 @@
 #video-controls {
   margin: auto;
   width: 100%;
+  display: flex;
 }
 
 .play-bar-volume {
@@ -266,7 +271,7 @@
 
 input[type=range] {
   -webkit-appearance: none;
-  width: 65%;
+  width: 100%;
   margin-left: 2%;
 }
 

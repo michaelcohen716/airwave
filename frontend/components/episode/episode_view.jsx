@@ -65,7 +65,7 @@ class EpisodeView extends React.Component {
   }
 
   getDuration(){
-    return (
+      return (
       document.getElementById("video").duration
     );
   }
