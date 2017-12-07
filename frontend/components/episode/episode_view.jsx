@@ -9,16 +9,16 @@ class EpisodeView extends React.Component {
     this.playOrPause = this.playOrPause.bind(this);
     this.rewind = this.rewind.bind(this);
     this.forward = this.forward.bind(this);
-    // this.changeVolume = this.changeVolume.bind(this);
     // this.renderFullscreen = this.renderFullscreen.bind(this);
     this.state = {
       paused: true,
       duration: 0,
       currentTime: 0,
-      rendered: false
+      rendered: false,
+      volume: 1
     };
     this.video = document.getElementById("video");
-
+    this.changeVolume = this.changeVolume.bind(this);
     this.updateBar = this.updateBar.bind(this);
     this.updateProgress = this.updateProgress.bind(this);
   }
@@ -49,8 +49,10 @@ class EpisodeView extends React.Component {
 
     if (video.volume === 0){
       video.volume = 1;
+      this.setState({volume: 1});
     } else {
       video.volume = 0;
+      this.setState({volume: 0});
     }
   }
 
@@ -104,23 +106,13 @@ class EpisodeView extends React.Component {
     }
   }
 
-  // startSeekVideo(){
-  //   this.setState({paused: true});
-  // }
-  //
-  // endSeekVideo(){
-  //   this.video.seek(time);
-  // }
-
   render(){
 
     if(this.props.episode){
       const fullTitle = this.props.episode.title;
       const showName = fullTitle.substr(0, fullTitle.indexOf(':'));
       const episodeName = fullTitle.split(':')[1];
-
-
-
+      let video = document.getElementById("video");
 
       return (
         <div className="episode-grandparent">
@@ -162,10 +154,7 @@ class EpisodeView extends React.Component {
 
                   </div>
 
-
-
-
-                  <button className="play-bar-volume fa fa-volume-up"
+                  <button className={(this.state.volume == 0) ? "fa fa-volume-off play-bar-volume" : "fa fa-volume-up play-bar-volume" }
                     onClick={this.changeVolume}>
                   </button>
                   <button className="play-bar-settings fa fa-cog">
