@@ -17,6 +17,8 @@ class EpisodeView extends React.Component {
       currentTime: 0,
       rendered: false
     };
+    this.video = document.getElementById("video");
+
     this.updateBar = this.updateBar.bind(this);
     this.updateProgress = this.updateProgress.bind(this);
   }
@@ -33,18 +35,22 @@ class EpisodeView extends React.Component {
   }
 
   rewind() {
-    this.video.currentTime -= 5;
+    let video = document.getElementById("video");
+    video.currentTime -= 5;
   }
 
   forward(){
-    this.video.currentTime += 5;
+    let video = document.getElementById("video");
+    video.currentTime += 5;
   }
 
   changeVolume(){
-    if (this.video.volume === 0){
-      this.video.volume = 1;
+    let video = document.getElementById("video");
+
+    if (video.volume === 0){
+      video.volume = 1;
     } else {
-      this.video.volume = 0;
+      video.volume = 0;
     }
   }
 
