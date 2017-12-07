@@ -10,8 +10,10 @@
   margin: 0 auto;
   margin-top: 0px;
   margin-left: 7%;
-  // opacity: 0.9;
-  // background-color: rgba(255, 0, 0, 0.1);
+}
+
+.dulled {
+  filter: brightness(35%);
 }
 
 .nav-bar-right {
@@ -29,9 +31,6 @@
 }
 
 .airwave-logo {
-  // padding-top: -5px;
-  // padding-left: 120px;
-  // padding-right: 8px;
   margin-right: 4%;
   color: rgb(102, 170, 50);
   font-size: 24px;
@@ -107,7 +106,6 @@
   padding-top: 10px;
   font-size: 14px;
   list-style: none;
-  // margin-top: 10px;
 }
 
 .dropdown-button {
@@ -128,12 +126,10 @@
 }
 
 .dropdown-content-holder {
-  // margin-top: 10px;
   padding-top: 13px;
   padding-left: 20px;
   padding-right: 10px;
   padding-bottom: 13px;
-  // background-color: #444444;
   background-color: black;
   opacity: 0.8;
   display: block;
