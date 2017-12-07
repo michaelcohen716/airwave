@@ -12,9 +12,9 @@ export const NavBar = ({currentUser, openModal, logout, history}) => {
 
   const showFreeTrial = currentUser ?
                       (
-                        <button className="dropdown-button">
+                        <a href="https://hulu.com" className="dropdown-button">
                           {freeTrialOrNot}
-                        </button>
+                        </a>
                       ) :
                       (
                         <button className="dropdown-button" onClick={(e)=>openModal("signup")}>

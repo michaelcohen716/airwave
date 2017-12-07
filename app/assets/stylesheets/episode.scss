@@ -6,6 +6,17 @@
   position: absolute;
 }
 
+.progress-bar {
+  width: 400px;
+  height: 32px;
+}
+
+.progress-bar::webkit-slider-thumb {
+  width: 20px;
+  height: 20px;
+  border: 0.5px solid red;
+}
+
 .video-container {
   left: 7%;
   // margin-right: 13px;
@@ -140,7 +151,7 @@
 
 .episode-show-show:hover {
   color: #66aa33;
-  
+
 }
 
 .episode-show-episode {

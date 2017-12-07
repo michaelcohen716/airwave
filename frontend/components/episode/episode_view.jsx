@@ -9,19 +9,25 @@ class EpisodeView extends React.Component {
     this.playOrPause = this.playOrPause.bind(this);
     this.rewind = this.rewind.bind(this);
     this.forward = this.forward.bind(this);
-    this.changeVolume = this.changeVolume.bind(this);
-    this.renderFullscreen = this.renderFullscreen.bind(this);
+    // this.changeVolume = this.changeVolume.bind(this);
+    // this.renderFullscreen = this.renderFullscreen.bind(this);
     this.state = {
-      paused: true
+      paused: true,
+      duration: 0,
+      currentTime: 0,
+      rendered: false
     };
+    this.updateBar = this.updateBar.bind(this);
+    this.updateProgress = this.updateProgress.bind(this);
   }
 
   playOrPause() {
-    if (this.video.paused) {
-      this.video.play();
+    let video = document.getElementById("video");
+    if (video.paused) {
+      video.play();
       this.setState({ paused: false});
     } else{
-      this.video.pause();
+      video.pause();
       this.setState({ paused: true});
     }
   }
@@ -47,26 +53,38 @@ class EpisodeView extends React.Component {
 
   }
 
+  setProgress(e){
+    this.tag.currentTime = e.target.value;
+  }
+
   updateProgress(){
-    this.video.addEventListener('timeupdate', function() {
-      const progressBar = document.getElementById("progress-bar");
-      let percentCompleted = Math.floor((100 / this.video.duration * this.video.currentTime));
-      progressBar.value = percentCompleted;
-      progressBar.innerHTML = percentCompleted;
-
-    }, false);
+    this.setState({
+      duration: this.getDuration(),
+      currentTime: this.getCurrentTime()
+    });
   }
 
-  trackProgress(){
-    progressInterval = setInterval(updateProgress, 33);
+  getDuration(){
+    return (
+      document.getElementById("video").duration
+    );
   }
 
-  stopTrackingProgress(){
-    clearInterval(progressInterval);
+  getCurrentTime(){
+    return (
+      document.getElementById("video").currentTime
+    );
+  }
+
+  updateBar(){
+    this.setState({
+      currentTime: this.getCurrentTime()
+    });
   }
 
   componentDidMount(){
     this.props.fetchShowEpisode(this.props.match.params.episodeId);
+    // if(this.props.episode)
   }
 
   componentWillReceiveProps(nextProps) {
@@ -80,13 +98,13 @@ class EpisodeView extends React.Component {
     }
   }
 
-  startSeekVideo(){
-    this.setState({paused: true});
-  }
-
-  endSeekVideo(){
-    this.video.seek(time);
-  }
+  // startSeekVideo(){
+  //   this.setState({paused: true});
+  // }
+  //
+  // endSeekVideo(){
+  //   this.video.seek(time);
+  // }
 
   render(){
 
@@ -95,10 +113,7 @@ class EpisodeView extends React.Component {
       const showName = fullTitle.substr(0, fullTitle.indexOf(':'));
       const episodeName = fullTitle.split(':')[1];
 
-      var progressBarStyle =
-      (<progress className="play-bar-progress" id="progress-bar" min="0" max="100" value="0">
-      <span id="progress-bar-render">0</span>%played
-      </progress>);
+
 
 
       return (
@@ -109,9 +124,11 @@ class EpisodeView extends React.Component {
           <div className="video-tray">
 
             <div className="video-container" id="episode">
-              <video ref={element => this.video = element}>
+              <video id="video" ref={element => this.tag = element}
+                onCanPlayThrough={this.updateProgress}
+                onTimeUpdate={this.updateBar}
 
-                <source src={this.props.episode.videoUrl} type="video/mp4"></source>
+                src={this.props.episode.videoUrl} type="video/mp4">
               </video>
 
               <div className="play-bar-parent">
@@ -127,8 +144,17 @@ class EpisodeView extends React.Component {
                   <button className="play-bar-forward fa fa-step-forward"
                     onClick={this.forward}>
                   </button>
+                  <div className="progress-bar-holder" >
+                    <input type="range"
+                           step="1"
+                           id="progress-bar"
+                           className="progress-bar"
+                           min="0"
+                           max={this.state.duration}
+                           onChange={e => this.setProgress(e)}
+                           value={this.state.currentTime}/>
 
-                  <input type="range" value="0" min="0" max="0"/>
+                  </div>
 
 
 
