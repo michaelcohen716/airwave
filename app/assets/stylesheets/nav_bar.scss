@@ -1,6 +1,8 @@
 .nav-bar {
   display: flex;
-  width: 900px;
+  width: 100%;
+  min-width: 1070px;
+  // width: 900px;
   height: 50px;
   justify-content: space-between;
   position: absolute;
@@ -19,7 +21,7 @@
 .nav-bar-right {
   width: 30%;
   display: flex;
-  margin-right: 3%;
+  margin-right: 20%;
   align-items: center;
   justify-content: flex-end;
 }
@@ -74,7 +76,8 @@
 }
 
 .search-parent {
-  margin-left: 12px;
+  // margin-left: 225px;
+  margin-left: 15%;
   margin-top: 5px;
 }
 

@@ -9,7 +9,6 @@ class EpisodeView extends React.Component {
     this.playOrPause = this.playOrPause.bind(this);
     this.rewind = this.rewind.bind(this);
     this.forward = this.forward.bind(this);
-    // this.renderFullscreen = this.renderFullscreen.bind(this);
     this.state = {
       paused: true,
       duration: 0,

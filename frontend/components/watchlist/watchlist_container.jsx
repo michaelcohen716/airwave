@@ -7,6 +7,8 @@ const mapStateToProps = state => {
 
   if (state.session.currentUser) {
     watchlistIds = state.session.currentUser.watchlistIds;
+  } else {
+    
   }
 
   if (!watchlistIds) {
@@ -16,7 +18,6 @@ const mapStateToProps = state => {
   let watchlistEpisodes = watchlistIds.map(id => {
     return state.entities.episodes[id];
   });
-
 
 
   return {

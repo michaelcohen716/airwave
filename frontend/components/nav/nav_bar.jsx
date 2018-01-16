@@ -34,27 +34,10 @@ export const NavBar = ({currentUser, openModal, logout, history}) => {
           <ul>
             <span className="banner-dropdown">
               <button className="dropdown-button" onClick={() => history.push('/episodes')}>
-                TV
+                EPISODES
               </button>
             </span>
 
-            <span className="banner-dropdown">
-              <button className="dropdown-button" onClick={() => history.push('/episodes')}>
-                MOVIES
-              </button>
-            </span>
-
-            <li className="banner-dropdown">
-              <button className="dropdown-button" onClick={() => history.push('/episodes')}>
-                KIDS
-              </button>
-            </li>
-
-            <li className="banner-dropdown">
-              <button className="dropdown-button" onClick={() => history.push('/episodes')}>
-                ADD-ONS
-              </button>
-            </li>
           </ul>
 
           <SearchBar />
@@ -78,3 +61,22 @@ export const NavBar = ({currentUser, openModal, logout, history}) => {
 
 
 export default withRouter(NavBar);
+
+
+// <span className="banner-dropdown">
+//   <button className="dropdown-button" onClick={() => history.push('/episodes')}>
+//     MOVIES
+//   </button>
+// </span>
+//
+// <li className="banner-dropdown">
+//   <button className="dropdown-button" onClick={() => history.push('/episodes')}>
+//     KIDS
+//   </button>
+// </li>
+//
+// <li className="banner-dropdown">
+//   <button className="dropdown-button" onClick={() => history.push('/episodes')}>
+//     ADD-ONS
+//   </button>
+// </li>

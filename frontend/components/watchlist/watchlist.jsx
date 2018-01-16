@@ -37,7 +37,20 @@ class Watchlist extends React.Component {
     }
 
     else {
-      return <div></div>;
+      return (
+        <div className="watchlist-parent">
+          <section className="watchlist-topbar">
+            <div className="watchlist-topbar-title">
+              Login for Access to Episodes!
+            </div>
+          </section>
+          <section className="watchlist-index">
+
+          </section>
+        </div>
+      );
+
+
     }
   }
 }
