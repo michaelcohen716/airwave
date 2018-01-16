@@ -36,7 +36,6 @@ const App = ({ modal, closeModal }) => {
       <Route exact path="/episodes" component={EpisodeIndex} />
 
 
-      <Footer />
     </div>
   );
 };
