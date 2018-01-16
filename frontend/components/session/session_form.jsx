@@ -63,7 +63,7 @@ class SessionForm extends React.Component {
                   <div className="fb-login-head">
                     <a href="https://facebook.com" className="fb-login-instantly">Log in instantly with Facebook</a>
                   </div>
-                  <span className="fb-login-recommended">(Recommended)</span>
+                  <span className="fb-login-recommended">(Upcoming Feature)</span>
                   <a href="https://facebook.com"><div className="fb-login-button"></div></a>
                   <ul className="fb-login-attributes">
                     <li>Share what you love with your friends</li>
