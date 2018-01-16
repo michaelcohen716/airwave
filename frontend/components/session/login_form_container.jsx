@@ -16,6 +16,7 @@ const mapDispatchToProps = (dispatch, ownProps) => {
     switchModal: () => dispatch(openModal('signup')),
     closeModal: () => dispatch(closeModal()),
     submitAction: user => dispatch(login(user)),
+    login: user => dispatch(login(user)),
     formType: "login"
   };
 };
