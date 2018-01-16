@@ -11,7 +11,8 @@ class SearchBar extends React.Component {
   }
 
   search(){
-    this.props.fetchSearchResults(this.state.input).then(() => this.props.history.push('/search'));
+    this.props.fetchSearchResults(this.state.input);
+    this.props.history.push('/search');
   }
 
   searchTitles(titles){

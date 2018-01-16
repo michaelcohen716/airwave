@@ -7,9 +7,7 @@ const mapStateToProps = state => {
 
   if (state.session.currentUser) {
     watchlistIds = state.session.currentUser.watchlistIds;
-  } else {
-    
-  }
+  } 
 
   if (!watchlistIds) {
     watchlistIds = [];

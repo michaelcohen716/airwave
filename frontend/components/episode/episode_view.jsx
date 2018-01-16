@@ -20,6 +20,13 @@ class EpisodeView extends React.Component {
     this.changeVolume = this.changeVolume.bind(this);
     this.updateBar = this.updateBar.bind(this);
     this.updateProgress = this.updateProgress.bind(this);
+    this.start = this.start.bind(this);
+  }
+
+  start(){
+    let video = document.getElementById("video");
+    video.play();
+    this.setState({paused: false});
   }
 
   playOrPause() {
@@ -122,6 +129,7 @@ class EpisodeView extends React.Component {
 
             <div className="video-container" id="episode">
               <video id="video" ref={element => this.tag = element}
+                onCanPlay={this.start}
                 onCanPlayThrough={this.updateProgress}
                 onTimeUpdate={this.updateBar}
 

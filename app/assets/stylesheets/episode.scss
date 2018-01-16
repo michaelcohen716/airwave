@@ -45,12 +45,12 @@
 }
 
 .play-bar-parent {
-  width: 80%;
+  width: 82%;
   height: 14%;
   position: absolute;
   bottom: 15px;
   display: flex;
-  margin-left: 10%;
+  margin-left: 9%;
   background: black;
   opacity: 0.5;
   border-bottom: 0.5px solid gray;
@@ -105,7 +105,7 @@
 }
 
 .play-bar-volume {
-  margin-left: 3%;
+  margin-left: 2%;
   color: white;
 }
 
@@ -116,6 +116,7 @@
 
 .play-bar-fullscreen {
   margin-left: 2%;
+  margin-right: 1%;
   color: white;
 }
 
@@ -271,7 +272,7 @@
 
 input[type=range] {
   -webkit-appearance: none;
-  width: 530px;
+  width: 475px;
   margin-left: 2%;
 }
 
