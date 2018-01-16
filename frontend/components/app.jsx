@@ -18,10 +18,12 @@ import EpisodeViewContainer from './episode/episode_view_container';
 import ShowShowContainer from './show_show/show_show_container';
 import SearchPage from './search_page';
 import EpisodeIndex from './episode/episode_index';
+import Footer from './footer';
 
 const App = ({ modal, closeModal }) => {
   return (
     <div className="parent-parent">
+
       <NavBarContainer />
       <Route exact path="/" component={ShowcaseComponent} />
       <SessionModal component={modal === "login" ? LogInContainer : SignUpContainer}
@@ -32,6 +34,9 @@ const App = ({ modal, closeModal }) => {
       <Route path="/series/:seriesId" component={ShowShowContainer} />
       <Route path="/search" component={SearchPage} />
       <Route exact path="/episodes" component={EpisodeIndex} />
+
+
+      <Footer />
     </div>
   );
 };

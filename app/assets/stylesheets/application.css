@@ -30,7 +30,7 @@
   background-color: #f5f5f5;
   position: absolute;
   top: 450;
-  height: 1000px;
+  height: 500px;
   width: 120%;
 }
 
@@ -44,10 +44,41 @@
 
 .parent-parent {
   min-width: 1200px;
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* position: relative; */
+}
 
+.content {
+  flex: 1 0 auto;
 }
 
 html, body {
     max-width: 100%;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
+}
+
+.created-by {
+  margin-left: 12%;
+
+}
+
+.footer {
+  /* position: absolute; */
+  /* bottom: -450px; */
+  color: black;
+  height: 40px;
+  width: 100%;
+  border: none;
+  font-family: Helvetica, Arial, Verdana, sans-serif;
+  background-color: #f5f5f5;
+}
+
+.git-footer {
+  margin-left: 10px;
+}
+
+.git-linkedin {
+  margin-left: 10px;
+
 }
