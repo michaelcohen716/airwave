@@ -1,8 +1,10 @@
 .modal-backdrop {
   position: fixed;
-  width: 550px;
+  max-width: 550px;
   top: 100px;
-  left: 150px;
+  // left: 150px;
+  left: 16%;
+  width: 60%;
   z-index: 279;
   background: rgba(0, 0, 0, 0.2);
 }

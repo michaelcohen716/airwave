@@ -30,7 +30,7 @@ class SearchBar extends React.Component {
     return (
       <div className="search-parent">
         <form className="search-bar-input" onSubmit={this.search}>
-          <input type="text" placeholder="" onChange={this.update("input")}>
+          <input type="text" placeholder="feature in development" onChange={this.update("input")}>
           </input>
           <div className="button-holder">
           </div>
